@@ -1,0 +1,776 @@
+[
+    {
+        "lst": "04:41:54", 
+        "midpointDec": "+15:42:52.25", 
+        "midpointRA": "06:26:56.59", 
+        "name": "pointing0113", 
+        "obsDec": "+15:41:22.4", 
+        "obsHA": "-01:45:10", 
+        "obsRA": "06:26:09.42"
+    }, 
+    {
+        "lst": "03:18:58", 
+        "midpointDec": "+06:07:57.54", 
+        "midpointRA": "05:49:49.39", 
+        "name": "pointing0036", 
+        "obsDec": "+06:06:23.6", 
+        "obsHA": "-02:30:55", 
+        "obsRA": "05:49:01.20"
+    }, 
+    {
+        "lst": "03:44:13", 
+        "midpointDec": "+27:38:18.13", 
+        "midpointRA": "23:08:23.39", 
+        "name": "pointing0060", 
+        "obsDec": "+27:36:17.7", 
+        "obsHA": "+04:35:54", 
+        "obsRA": "23:07:32.24"
+    }, 
+    {
+        "lst": "04:34:19", 
+        "midpointDec": "-14:02:02.84", 
+        "midpointRA": "05:39:44.58", 
+        "name": "pointing0108", 
+        "obsDec": "-14:04:13.4", 
+        "obsHA": "-01:05:20", 
+        "obsRA": "05:38:55.54"
+    }, 
+    {
+        "lst": "03:11:51", 
+        "midpointDec": "-24:47:20.78", 
+        "midpointRA": "05:39:16.64", 
+        "name": "pointing0028", 
+        "obsDec": "-24:49:09.6", 
+        "obsHA": "-02:27:15", 
+        "obsRA": "05:38:26.36"
+    }, 
+    {
+        "lst": "04:51:11", 
+        "midpointDec": "+22:36:29.59", 
+        "midpointRA": "02:37:48.68", 
+        "name": "pointing0118", 
+        "obsDec": "+22:34:51.5", 
+        "obsHA": "+02:13:18", 
+        "obsRA": "02:36:56.32"
+    }, 
+    {
+        "lst": "04:35:14", 
+        "midpointDec": "-15:58:05.65", 
+        "midpointRA": "05:07:13.75", 
+        "name": "pointing0109", 
+        "obsDec": "-16:00:23.9", 
+        "obsHA": "-00:31:53", 
+        "obsRA": "05:06:23.89"
+    }, 
+    {
+        "lst": "03:12:43", 
+        "midpointDec": "-21:52:05.36", 
+        "midpointRA": "05:28:25.15", 
+        "name": "pointing0029", 
+        "obsDec": "-21:54:01.3", 
+        "obsHA": "-02:15:33", 
+        "obsRA": "05:27:35.31"
+    }, 
+    {
+        "lst": "04:12:05", 
+        "midpointDec": "+11:55:39.57", 
+        "midpointRA": "01:37:48.01", 
+        "name": "pointing0088", 
+        "obsDec": "+11:53:36.3", 
+        "obsHA": "+02:34:18", 
+        "obsRA": "01:36:54.80"
+    }, 
+    {
+        "lst": "02:57:14", 
+        "midpointDec": "+60:56:27.81", 
+        "midpointRA": "08:39:02.57", 
+        "name": "pointing0012", 
+        "obsDec": "+60:56:29.0", 
+        "obsHA": "-05:42:12", 
+        "obsRA": "08:38:08.77"
+    }, 
+    {
+        "lst": "03:15:21", 
+        "midpointDec": "-12:21:54.06", 
+        "midpointRA": "05:27:08.74", 
+        "name": "pointing0032", 
+        "obsDec": "-12:23:54.1", 
+        "obsHA": "-02:11:43", 
+        "obsRA": "05:26:19.64"
+    }, 
+    {
+        "lst": "03:14:29", 
+        "midpointDec": "-14:37:49.48", 
+        "midpointRA": "05:32:12.05", 
+        "name": "pointing0031", 
+        "obsDec": "-14:39:44.0", 
+        "obsHA": "-02:17:37", 
+        "obsRA": "05:31:22.75"
+    }, 
+    {
+        "lst": "04:03:02", 
+        "midpointDec": "+49:30:43.03", 
+        "midpointRA": "23:45:17.30", 
+        "name": "pointing0079", 
+        "obsDec": "+49:29:10.7", 
+        "obsHA": "+04:17:47", 
+        "obsRA": "23:44:26.28"
+    }, 
+    {
+        "lst": "04:38:50", 
+        "midpointDec": "+56:19:32.25", 
+        "midpointRA": "06:33:34.70", 
+        "name": "pointing0110", 
+        "obsDec": "+56:19:21.7", 
+        "obsHA": "-01:55:19", 
+        "obsRA": "06:32:47.34"
+    }, 
+    {
+        "lst": "03:24:30", 
+        "midpointDec": "+39:38:52.29", 
+        "midpointRA": "07:26:48.58", 
+        "name": "pointing0042", 
+        "obsDec": "+39:38:05.3", 
+        "obsHA": "-04:02:34", 
+        "obsRA": "07:25:59.48"
+    }, 
+    {
+        "lst": "03:10:08", 
+        "midpointDec": "-28:05:20.25", 
+        "midpointRA": "06:04:52.29", 
+        "name": "pointing0026", 
+        "obsDec": "-28:06:59.8", 
+        "obsHA": "-02:54:31", 
+        "obsRA": "06:04:01.27"
+    }, 
+    {
+        "lst": "04:28:00", 
+        "midpointDec": "+19:02:18.92", 
+        "midpointRA": "08:09:41.28", 
+        "name": "pointing0101", 
+        "obsDec": "+19:01:12.2", 
+        "obsHA": "-03:41:48", 
+        "obsRA": "08:08:53.17"
+    }, 
+    {
+        "lst": "04:56:23", 
+        "midpointDec": "+26:18:00.55", 
+        "midpointRA": "03:24:16.93", 
+        "name": "pointing0123", 
+        "obsDec": "+26:16:39.7", 
+        "obsHA": "+01:31:59", 
+        "obsRA": "03:23:25.43"
+    }, 
+    {
+        "lst": "03:11:00", 
+        "midpointDec": "-26:28:09.93", 
+        "midpointRA": "05:45:20.01", 
+        "name": "pointing0027", 
+        "obsDec": "-26:29:59.3", 
+        "obsHA": "-02:34:08", 
+        "obsRA": "05:44:29.55"
+    }, 
+    {
+        "lst": "04:13:56", 
+        "midpointDec": "+23:53:40.90", 
+        "midpointRA": "01:11:16.12", 
+        "name": "pointing0090", 
+        "obsDec": "+23:51:50.2", 
+        "obsHA": "+03:02:40", 
+        "obsRA": "01:10:23.11"
+    }, 
+    {
+        "lst": "03:09:20", 
+        "midpointDec": "-28:29:31.03", 
+        "midpointRA": "06:10:18.35", 
+        "name": "pointing0025", 
+        "obsDec": "-28:31:06.4", 
+        "obsHA": "-03:00:45", 
+        "obsRA": "06:09:27.27"
+    }, 
+    {
+        "lst": "04:55:06", 
+        "midpointDec": "+58:35:51.44", 
+        "midpointRA": "03:41:28.09", 
+        "name": "pointing0122", 
+        "obsDec": "+58:35:12.2", 
+        "obsHA": "+01:13:07", 
+        "obsRA": "03:40:38.26"
+    }, 
+    {
+        "lst": "04:01:08", 
+        "midpointDec": "+34:29:01.02", 
+        "midpointRA": "23:58:35.01", 
+        "name": "pointing0077", 
+        "obsDec": "+34:27:15.6", 
+        "obsHA": "+04:02:36", 
+        "obsRA": "23:57:43.08"
+    }, 
+    {
+        "lst": "04:52:09", 
+        "midpointDec": "+31:51:41.93", 
+        "midpointRA": "02:25:38.44", 
+        "name": "pointing0119", 
+        "obsDec": "+31:50:13.4", 
+        "obsHA": "+02:26:25", 
+        "obsRA": "02:24:46.16"
+    }, 
+    {
+        "lst": "03:06:20", 
+        "midpointDec": "+05:49:02.35", 
+        "midpointRA": "07:47:09.19", 
+        "name": "pointing0022", 
+        "obsDec": "+05:47:54.9", 
+        "obsHA": "-04:40:49", 
+        "obsRA": "07:46:18.48"
+    }, 
+    {
+        "lst": "04:25:11", 
+        "midpointDec": "+41:09:48.61", 
+        "midpointRA": "08:37:11.36", 
+        "name": "pointing0098", 
+        "obsDec": "+41:09:14.3", 
+        "obsHA": "-04:12:14", 
+        "obsRA": "08:36:22.58"
+    }, 
+    {
+        "lst": "04:02:05", 
+        "midpointDec": "+42:06:46.28", 
+        "midpointRA": "23:55:50.37", 
+        "name": "pointing0078", 
+        "obsDec": "+42:05:08.5", 
+        "obsHA": "+04:06:17", 
+        "obsRA": "23:54:58.65"
+    }, 
+    {
+        "lst": "03:46:02", 
+        "midpointDec": "+37:42:40.45", 
+        "midpointRA": "22:46:29.47", 
+        "name": "pointing0062", 
+        "obsDec": "+37:40:48.4", 
+        "obsHA": "+04:59:39", 
+        "obsRA": "22:45:39.44"
+    }, 
+    {
+        "lst": "03:57:24", 
+        "midpointDec": "+07:43:29.32", 
+        "midpointRA": "00:55:19.10", 
+        "name": "pointing0073", 
+        "obsDec": "+07:41:16.5", 
+        "obsHA": "+03:02:08", 
+        "obsRA": "00:54:25.40"
+    }, 
+    {
+        "lst": "03:05:26", 
+        "midpointDec": "+10:50:56.16", 
+        "midpointRA": "07:49:55.40", 
+        "name": "pointing0021", 
+        "obsDec": "+10:49:49.3", 
+        "obsHA": "-04:44:31", 
+        "obsRA": "07:49:04.74"
+    }, 
+    {
+        "lst": "03:21:45", 
+        "midpointDec": "+24:29:07.61", 
+        "midpointRA": "06:31:39.35", 
+        "name": "pointing0039", 
+        "obsDec": "+24:27:59.2", 
+        "obsHA": "-03:10:05", 
+        "obsRA": "06:30:51.45"
+    }, 
+    {
+        "lst": "04:31:40", 
+        "midpointDec": "-04:32:33.53", 
+        "midpointRA": "06:54:03.93", 
+        "name": "pointing0105", 
+        "obsDec": "-04:34:15.7", 
+        "obsHA": "-02:22:24", 
+        "obsRA": "06:53:16.01"
+    }, 
+    {
+        "lst": "03:51:01", 
+        "midpointDec": "-17:32:12.10", 
+        "midpointRA": "03:53:36.40", 
+        "name": "pointing0066", 
+        "obsDec": "-17:34:42.8", 
+        "obsHA": "-00:02:27", 
+        "obsRA": "03:52:45.24"
+    }, 
+    {
+        "lst": "03:43:16", 
+        "midpointDec": "+20:30:50.88", 
+        "midpointRA": "23:12:17.09", 
+        "name": "pointing0059", 
+        "obsDec": "+20:28:44.9", 
+        "obsHA": "+04:31:03", 
+        "obsRA": "23:11:25.70"
+    }, 
+    {
+        "lst": "02:59:06", 
+        "midpointDec": "+47:16:05.11", 
+        "midpointRA": "08:25:25.61", 
+        "name": "pointing0014", 
+        "obsDec": "+47:15:47.0", 
+        "obsHA": "-05:26:34", 
+        "obsRA": "08:24:33.56"
+    }, 
+    {
+        "lst": "04:33:26", 
+        "midpointDec": "-11:10:38.42", 
+        "midpointRA": "06:07:27.70", 
+        "name": "pointing0107", 
+        "obsDec": "-11:12:41.0", 
+        "obsHA": "-01:33:58", 
+        "obsRA": "06:06:39.22"
+    }, 
+    {
+        "lst": "04:29:51", 
+        "midpointDec": "+05:53:32.10", 
+        "midpointRA": "07:37:46.73", 
+        "name": "pointing0103", 
+        "obsDec": "+05:52:05.7", 
+        "obsHA": "-03:07:59", 
+        "obsRA": "07:36:59.06"
+    }, 
+    {
+        "lst": "05:00:06", 
+        "midpointDec": "+50:58:21.21", 
+        "midpointRA": "04:20:00.37", 
+        "name": "pointing0127", 
+        "obsDec": "+50:57:41.4", 
+        "obsHA": "+00:39:40", 
+        "obsRA": "04:19:11.22"
+    }, 
+    {
+        "lst": "03:18:04", 
+        "midpointDec": "+01:44:56.42", 
+        "midpointRA": "05:44:09.95", 
+        "name": "pointing0035", 
+        "obsDec": "+01:43:10.7", 
+        "obsHA": "-02:26:07", 
+        "obsRA": "05:43:21.56"
+    }, 
+    {
+        "lst": "03:25:26", 
+        "midpointDec": "+45:22:19.17", 
+        "midpointRA": "07:46:38.68", 
+        "name": "pointing0043", 
+        "obsDec": "+45:21:44.8", 
+        "obsHA": "-04:21:31", 
+        "obsRA": "07:45:48.90"
+    }, 
+    {
+        "lst": "05:02:43", 
+        "midpointDec": "+54:26:08.52", 
+        "midpointRA": "05:37:22.28", 
+        "name": "pointing0129", 
+        "obsDec": "+54:25:43.1", 
+        "obsHA": "-00:35:10", 
+        "obsRA": "05:36:33.19"
+    }, 
+    {
+        "lst": "04:27:03", 
+        "midpointDec": "+26:50:47.88", 
+        "midpointRA": "08:14:15.67", 
+        "name": "pointing0100", 
+        "obsDec": "+26:49:48.9", 
+        "obsHA": "-03:47:22", 
+        "obsRA": "08:13:27.58"
+    }, 
+    {
+        "lst": "03:22:40", 
+        "midpointDec": "+28:49:10.75", 
+        "midpointRA": "06:45:02.94", 
+        "name": "pointing0040", 
+        "obsDec": "+28:48:05.3", 
+        "obsHA": "-03:22:36", 
+        "obsRA": "06:44:14.85"
+    }, 
+    {
+        "lst": "04:30:44", 
+        "midpointDec": "+01:55:28.43", 
+        "midpointRA": "07:14:44.18", 
+        "name": "pointing0104", 
+        "obsDec": "+01:53:53.9", 
+        "obsHA": "-02:44:02", 
+        "obsRA": "07:13:56.55"
+    }, 
+    {
+        "lst": "03:19:54", 
+        "midpointDec": "+13:18:24.13", 
+        "midpointRA": "06:00:26.32", 
+        "name": "pointing0037", 
+        "obsDec": "+13:17:00.2", 
+        "obsHA": "-02:40:38", 
+        "obsRA": "05:59:38.40"
+    }, 
+    {
+        "lst": "04:59:12", 
+        "midpointDec": "+46:44:33.07", 
+        "midpointRA": "03:46:37.30", 
+        "name": "pointing0126", 
+        "obsDec": "+46:43:42.1", 
+        "obsHA": "+01:12:15", 
+        "obsRA": "03:45:46.98"
+    }, 
+    {
+        "lst": "04:28:55", 
+        "midpointDec": "+12:16:09.59", 
+        "midpointRA": "07:54:48.41", 
+        "name": "pointing0102", 
+        "obsDec": "+12:14:57.3", 
+        "obsHA": "-03:25:58", 
+        "obsRA": "07:54:00.55"
+    }, 
+    {
+        "lst": "03:23:36", 
+        "midpointDec": "+34:47:38.58", 
+        "midpointRA": "07:06:41.91", 
+        "name": "pointing0041", 
+        "obsDec": "+34:46:43.0", 
+        "obsHA": "-03:43:21", 
+        "obsRA": "07:05:53.36"
+    }, 
+    {
+        "lst": "03:08:08", 
+        "midpointDec": "-04:17:32.61", 
+        "midpointRA": "07:44:10.29", 
+        "name": "pointing0024", 
+        "obsDec": "-04:18:45.4", 
+        "obsHA": "-04:35:58", 
+        "obsRA": "07:43:18.71"
+    }, 
+    {
+        "lst": "03:46:57", 
+        "midpointDec": "+43:27:04.50", 
+        "midpointRA": "22:37:09.35", 
+        "name": "pointing0063", 
+        "obsDec": "+43:25:17.1", 
+        "obsHA": "+05:09:55", 
+        "obsRA": "22:36:19.84"
+    }, 
+    {
+        "lst": "04:04:00", 
+        "midpointDec": "+57:53:27.58", 
+        "midpointRA": "23:51:37.60", 
+        "name": "pointing0080", 
+        "obsDec": "+57:52:00.5", 
+        "obsHA": "+04:12:23", 
+        "obsRA": "23:50:46.76"
+    }, 
+    {
+        "lst": "04:26:07", 
+        "midpointDec": "+33:43:54.84", 
+        "midpointRA": "08:28:55.55", 
+        "name": "pointing0099", 
+        "obsDec": "+33:43:05.3", 
+        "obsHA": "-04:02:59", 
+        "obsRA": "08:28:07.12"
+    }, 
+    {
+        "lst": "05:01:43", 
+        "midpointDec": "+52:52:45.77", 
+        "midpointRA": "04:56:55.10", 
+        "name": "pointing0128", 
+        "obsDec": "+52:52:11.3", 
+        "obsHA": "+00:04:18", 
+        "obsRA": "04:56:07.11"
+    }, 
+    {
+        "lst": "03:17:10", 
+        "midpointDec": "-02:58:35.15", 
+        "midpointRA": "05:37:10.83", 
+        "name": "pointing0034", 
+        "obsDec": "-03:00:24.5", 
+        "obsHA": "-02:20:01", 
+        "obsRA": "05:36:22.27"
+    }, 
+    {
+        "lst": "03:41:28", 
+        "midpointDec": "+11:36:02.21", 
+        "midpointRA": "23:40:14.70", 
+        "name": "pointing0057", 
+        "obsDec": "+11:33:48.5", 
+        "obsHA": "+04:01:17", 
+        "obsRA": "23:39:22.14"
+    }, 
+    {
+        "lst": "04:40:54", 
+        "midpointDec": "+27:51:48.70", 
+        "midpointRA": "07:03:50.69", 
+        "name": "pointing0112", 
+        "obsDec": "+27:50:40.5", 
+        "obsHA": "-02:23:10", 
+        "obsRA": "07:03:03.87"
+    }, 
+    {
+        "lst": "04:32:32", 
+        "midpointDec": "-08:13:04.96", 
+        "midpointRA": "06:35:16.32", 
+        "name": "pointing0106", 
+        "obsDec": "-08:14:59.4", 
+        "obsHA": "-02:02:42", 
+        "obsRA": "06:34:28.15"
+    }, 
+    {
+        "lst": "04:42:53", 
+        "midpointDec": "+05:00:36.24", 
+        "midpointRA": "05:45:11.99", 
+        "name": "pointing0114", 
+        "obsDec": "+04:58:46.9", 
+        "obsHA": "-01:02:22", 
+        "obsRA": "05:44:23.98"
+    }, 
+    {
+        "lst": "04:14:52", 
+        "midpointDec": "+30:36:54.83", 
+        "midpointRA": "01:11:21.61", 
+        "name": "pointing0091", 
+        "obsDec": "+30:35:13.7", 
+        "obsHA": "+03:03:29", 
+        "obsRA": "01:10:28.77"
+    }, 
+    {
+        "lst": "04:16:43", 
+        "midpointDec": "+42:22:39.86", 
+        "midpointRA": "00:59:16.09", 
+        "name": "pointing0093", 
+        "obsDec": "+42:21:16.4", 
+        "obsHA": "+03:17:24", 
+        "obsRA": "00:58:23.78"
+    }, 
+    {
+        "lst": "03:48:48", 
+        "midpointDec": "+55:05:25.40", 
+        "midpointRA": "22:18:12.56", 
+        "name": "pointing0065", 
+        "obsDec": "+55:03:47.6", 
+        "obsHA": "+05:30:47", 
+        "obsRA": "22:17:24.41"
+    }, 
+    {
+        "lst": "04:54:07", 
+        "midpointDec": "+52:24:43.54", 
+        "midpointRA": "02:50:32.78", 
+        "name": "pointing0121", 
+        "obsDec": "+52:23:52.0", 
+        "obsHA": "+02:03:15", 
+        "obsRA": "02:49:41.47"
+    }, 
+    {
+        "lst": "04:58:16", 
+        "midpointDec": "+40:26:13.85", 
+        "midpointRA": "03:32:52.29", 
+        "name": "pointing0125", 
+        "obsDec": "+40:25:16.9", 
+        "obsHA": "+01:25:09", 
+        "obsRA": "03:32:01.36"
+    }, 
+    {
+        "lst": "04:57:19", 
+        "midpointDec": "+33:18:38.24", 
+        "midpointRA": "03:22:36.34", 
+        "name": "pointing0124", 
+        "obsDec": "+33:17:28.3", 
+        "obsHA": "+01:34:33", 
+        "obsRA": "03:21:45.08"
+    }, 
+    {
+        "lst": "03:42:22", 
+        "midpointDec": "+16:03:44.46", 
+        "midpointRA": "23:30:39.51", 
+        "name": "pointing0058", 
+        "obsDec": "+16:01:37.2", 
+        "obsHA": "+04:11:46", 
+        "obsRA": "23:29:47.25"
+    }, 
+    {
+        "lst": "04:45:41", 
+        "midpointDec": "+40:07:20.08", 
+        "midpointRA": "06:12:35.20", 
+        "name": "pointing0116", 
+        "obsDec": "+40:06:39.3", 
+        "obsHA": "-01:27:14", 
+        "obsRA": "06:11:48.40"
+    }, 
+    {
+        "lst": "03:51:56", 
+        "midpointDec": "-16:57:05.80", 
+        "midpointRA": "03:20:38.77", 
+        "name": "pointing0067", 
+        "obsDec": "-16:59:41.9", 
+        "obsHA": "+00:31:24", 
+        "obsRA": "03:19:46.92"
+    }, 
+    {
+        "lst": "03:16:16", 
+        "midpointDec": "-07:26:46.51", 
+        "midpointRA": "05:32:21.33", 
+        "name": "pointing0033", 
+        "obsDec": "-07:28:41.3", 
+        "obsHA": "-02:16:03", 
+        "obsRA": "05:31:32.53"
+    }, 
+    {
+        "lst": "04:05:52", 
+        "midpointDec": "-08:32:46.51", 
+        "midpointRA": "04:05:34.58", 
+        "name": "pointing0081", 
+        "obsDec": "-08:35:04.3", 
+        "obsHA": "+00:00:21", 
+        "obsRA": "04:04:44.02"
+    }, 
+    {
+        "lst": "03:45:08", 
+        "midpointDec": "+32:24:09.76", 
+        "midpointRA": "23:00:24.76", 
+        "name": "pointing0061", 
+        "obsDec": "+32:22:17.3", 
+        "obsHA": "+04:44:48", 
+        "obsRA": "22:59:34.01"
+    }, 
+    {
+        "lst": "04:17:39", 
+        "midpointDec": "+49:26:10.24", 
+        "midpointRA": "01:01:33.77", 
+        "name": "pointing0094", 
+        "obsDec": "+49:24:53.3", 
+        "obsHA": "+03:16:00", 
+        "obsRA": "01:00:41.83"
+    }, 
+    {
+        "lst": "04:15:47", 
+        "midpointDec": "+36:09:00.06", 
+        "midpointRA": "01:06:41.33", 
+        "name": "pointing0092", 
+        "obsDec": "+36:07:31.5", 
+        "obsHA": "+03:09:04", 
+        "obsRA": "01:05:48.66"
+    }, 
+    {
+        "lst": "03:26:22", 
+        "midpointDec": "+51:59:00.75", 
+        "midpointRA": "08:06:08.21", 
+        "name": "pointing0044", 
+        "obsDec": "+51:58:34.7", 
+        "obsHA": "-04:40:07", 
+        "obsRA": "08:05:17.43"
+    }, 
+    {
+        "lst": "04:53:09", 
+        "midpointDec": "+42:37:13.55", 
+        "midpointRA": "02:24:33.21", 
+        "name": "pointing0120", 
+        "obsDec": "+42:36:02.2", 
+        "obsHA": "+02:28:25", 
+        "obsRA": "02:23:41.11"
+    }, 
+    {
+        "lst": "03:13:34", 
+        "midpointDec": "-19:41:19.08", 
+        "midpointRA": "05:29:55.22", 
+        "name": "pointing0030", 
+        "obsDec": "-19:43:16.4", 
+        "obsHA": "-02:16:13", 
+        "obsRA": "05:29:05.63"
+    }, 
+    {
+        "lst": "04:18:35", 
+        "midpointDec": "+55:27:45.31", 
+        "midpointRA": "01:17:17.31", 
+        "name": "pointing0095", 
+        "obsDec": "+55:26:35.1", 
+        "obsHA": "+03:01:08", 
+        "obsRA": "01:16:25.50"
+    }, 
+    {
+        "lst": "04:39:51", 
+        "midpointDec": "+42:29:07.44", 
+        "midpointRA": "07:04:08.92", 
+        "name": "pointing0111", 
+        "obsDec": "+42:28:33.6", 
+        "obsHA": "-02:24:38", 
+        "obsRA": "07:03:22.04"
+    }, 
+    {
+        "lst": "03:20:49", 
+        "midpointDec": "+18:09:54.29", 
+        "midpointRA": "06:09:31.88", 
+        "name": "pointing0038", 
+        "obsDec": "+18:08:34.7", 
+        "obsHA": "-02:48:51", 
+        "obsRA": "06:08:44.01"
+    }, 
+    {
+        "lst": "03:07:14", 
+        "midpointDec": "+00:21:48.22", 
+        "midpointRA": "07:47:26.29", 
+        "name": "pointing0023", 
+        "obsDec": "+00:20:43.5", 
+        "obsHA": "-04:40:09", 
+        "obsRA": "07:46:35.16"
+    }, 
+    {
+        "lst": "03:47:53", 
+        "midpointDec": "+50:04:47.84", 
+        "midpointRA": "22:26:19.72", 
+        "name": "pointing0064", 
+        "obsDec": "+50:03:07.2", 
+        "obsHA": "+05:21:43", 
+        "obsRA": "22:25:30.98"
+    }, 
+    {
+        "lst": "04:44:32", 
+        "midpointDec": "+53:25:20.85", 
+        "midpointRA": "04:44:25.07", 
+        "name": "pointing0115", 
+        "obsDec": "+53:24:55.8", 
+        "obsHA": "-00:00:22", 
+        "obsRA": "04:43:36.76"
+    }, 
+    {
+        "lst": "04:46:46", 
+        "midpointDec": "+21:42:11.37", 
+        "midpointRA": "05:57:51.46", 
+        "name": "pointing0117", 
+        "obsDec": "+21:40:49.3", 
+        "obsHA": "-01:11:15", 
+        "obsRA": "05:57:04.10"
+    }, 
+    {
+        "lst": "04:10:17", 
+        "midpointDec": "-04:10:24.94", 
+        "midpointRA": "02:23:08.19", 
+        "name": "pointing0086", 
+        "obsDec": "+02:21:44.9", 
+        "obsHA": "+01:58:08", 
+        "obsRA": "02:11:18.45"
+    }, 
+    {
+        "lst": "03:40:31", 
+        "midpointDec": "+04:41:59.97", 
+        "midpointRA": "23:47:48.17", 
+        "name": "pointing0056", 
+        "obsDec": "+04:39:40.5", 
+        "obsHA": "+03:52:47", 
+        "obsRA": "23:46:55.14"
+    }, 
+    {
+        "lst": "04:23:16", 
+        "midpointDec": "+57:54:38.63", 
+        "midpointRA": "08:50:57.16", 
+        "name": "pointing0096", 
+        "obsDec": "+57:54:29.9", 
+        "obsHA": "-04:28:03", 
+        "obsRA": "08:50:06.89"
+    }, 
+    {
+        "lst": "04:00:13", 
+        "midpointDec": "+27:56:01.77", 
+        "midpointRA": "00:07:37.87", 
+        "name": "pointing0076", 
+        "obsDec": "+27:54:07.6", 
+        "obsHA": "+03:52:37", 
+        "obsRA": "00:06:45.48"
+    }
+]

@@ -22,9 +22,6 @@ example = {
 }
 
 
-
-
-
 def get_info():
 	for name in ext1names:
 		if name in os.listdir('ext2'):
@@ -44,6 +41,7 @@ def get_info():
 			obsDec =  d1[0].header['dec']
 			obsHA =  d1[0].header['ha']
 			obsLST = d1[0].header['lst-obs']
+
 
 			info = {
 				"obsDec"			: 	obsDec,

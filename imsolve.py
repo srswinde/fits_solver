@@ -7,7 +7,12 @@ import argparse
 import json
 import subprocess
 import shlex
+import collections
+import re
+from astro.angles import RA_angle, Dec_angle
 
+
+"""
 default_params = {
 		'radius':5,
 		'scale-units': 'app',
@@ -16,23 +21,15 @@ default_params = {
 }
 
 default_flags =  ['overwrite', 'crpix-center']
-
+"""
 class imenc( json.JSONEncoder ):
 
 	def default( self, obj ):
-		print type(obj)
-		
-		if isinstance( obj, fits.hdu.image.PrimaryHDU ):
-			#print obj.fileinfo[0]['filename']
-			return 'foo'
-		elif isinstance( obj, fits.hdu.image.ImageHDU ):
-			return False
-			
-		else:
-			json.JSONEncoder.default(self, obj)
-		
 	
-class mont4k(  ):
+		return json.JSONEncoder.default(self, obj)
+
+	
+class mont4k( collections.MutableMapping ):
 	info = {}
 	default_params = {
 		'radius':5,
@@ -42,17 +39,35 @@ class mont4k(  ):
 	}
 	
 	default_flags =  ['overwrite', 'crpix-center']
-	tits = 'shit'
-	def __init__(self, imname):
+
+	def __init__(self, imname, indir='.', outdir='astrometry'):
 		
 		self.imname = imname
-		self.astropyimg = fits.open(imname) 
+		self.path = indir
 		
+		
+		
+		self.astropyimg = fits.open("{0}/{1}".format( indir, imname ) ) 
+		if outdir != '.' and not os.path.exists( outdir ):
+			os.mkdir(outdir)
+		
+		
+		self.default_params['dir'] = outdir
 		
 		self.tcsra = self.astropyimg[0].header['ra']
 		self.tcsdec = self.astropyimg[0].header['dec']
 		
-		
+	def __delitem__(self, key):
+		del self.info[key]
+	
+	def __iter__( self ):
+		return iter( json.loads(self.__str__() ) )
+	
+	
+	
+	
+	def __len__( self ):
+		len(self.info)
 
 	def __setitem__(self, key, val):
 		if key != 'info':
@@ -83,29 +98,72 @@ class mont4k(  ):
 	
 	
 	def __str__( self ):
-
-		return json.dumps( self.info, indent=4, cls=imenc )
-		
+		output = {}
+		for key,val in self.info.iteritems():
+			if isinstance( val, fits.hdu.hdulist.HDUList ):
+				pass
+			else:
+				output[key] = val
+		return json.dumps( output )
 	
-	def solve_ext( extnum ):
-		params = defualt_params
-		params['-6'] = extnum
-		tcsra, tcsdec = self.astropyimg
+	
+	def __dict__( self ):
+		output = {}
+		for key,val in self.info.iteritems():
+			if isinstance( val, fits.hdu.hdulist.HDUList ):
+				pass
+			else:
+				output[key] = val
+		return output
+	
+	
+	def solve_ext( self, extnum ):
+		params = self.default_params
+		
+		params['6'] = extnum
+
 		params['ra'] = self.tcsra
 		params['dec'] = self.tcsdec
-		print astrometry_cmd(params, default_flags)
+		params['o'] = "{0}_ext{1}".format( self.imname.replace('.fits', ''), extnum )
+		
+		
+		cmd = astrometry_cmd("{0}/{1}".format( self.path, self.imname), params, self.default_flags)
+		self.info['cmd_ext{0}'.format(extnum)] = cmd
+		
+		"""
+		Field: /home/scott/data/flexdata/pointing0037.fits
+		Field center: (RA,Dec) = (90.07, 13.31) deg.
+		Field center: (RA H:M:S, Dec D:M:S) = (06:00:16.596, +13:18:24.830).
+		Field size: 4.9711 x 9.67556 arcminutes
+		Field rotation angle: up is 0.272245 degrees E of N
+		"""
+		
+		
+		
+		resp = subprocess.check_output( shlex.split(cmd) )
+		
+		coords_finder = re.compile( "Field center: \(RA H:M:S, Dec D:M:S\) = \((\d\d:\d\d:\d\d\.\d?\d?\d), ([+|-]\d\d:\d\d:\d\d\.\d?\d?\d?)")
+		#finder = re.compile("Field center: \(RA H:M:S, Dec D:M:S\) = \((\d\d:\d\:\d\d\.\d?\d?\d?), [+\-](\d\d:\d\d:\d\d\.\d?\d?\d?\)).")
+		match = coords_finder.search(resp)
+		
+		if match:
+			self.info['ra_ext{0}'.format(extnum)],self.info['dec_ext{0}'.format(extnum)] = match.group(1), match.group(2)
+			
+			return match.group(1), match.group(2)
+			
+		return False
 		
 		
 	def solve_all(self):
-	
+		coords = []
+		for extnum in range(1,len(self.astropyimg)):
+			reply = self.solve_ext( extnum )
+			if reply:
+				ra, dec = RA_angle(reply[0]), Dec_angle(reply[1] )
+				coords.append((ra,dec))
+				
 		
-		cmd = astrometry_cmd( self.imname, self.default_params, self.default_flags )
-		print cmd
-		print
-		print
-		print 
-		s=subprocess.check_output(shlex.split(cmd))
-		return s
+		
 		
 		
 		

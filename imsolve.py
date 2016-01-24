@@ -159,7 +159,7 @@ class mont4k( collections.MutableMapping ):
 		for extnum in range(1,len(self.astropyimg)):
 			reply = self.solve_ext( extnum )
 			if reply:
-				ra, dec = RA_angle(reply[0]), Dec_angle(reply[1] )
+				ra, dec = RA_angle( reply[0]), Dec_angle(reply[1] )
 				coords.append((ra,dec))
 				
 		

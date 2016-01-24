@@ -5,7 +5,7 @@ def ascii_encode_dict(data):
     ascii_encode = lambda x: str(x).encode('ascii')
     return dict(map(ascii_encode, pair) for pair in data.items())
 
-f=open("data.json", 'r')
+f=open("offsets.json", 'r')
 
 outfile = open("tpoint_90.dat", 'w')
 data = json.loads(f.read(), object_hook=ascii_encode_dict)

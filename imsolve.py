@@ -32,7 +32,7 @@ class imenc( json.JSONEncoder ):
 class mont4k( collections.MutableMapping ):
 	info = {}
 	default_params = {
-		'radius':5,
+		
 		'scale-units': 'app',
 		'scale-low':0.1,
 		'scale-high':0.6,
@@ -247,7 +247,7 @@ that we are all used to.
 		img = fits.open(args.f)
 
 		#astro_params['ra'], astro_params['dec'] = getazcamradec( img )
-		astro_params['ra'], astro_params['dec'] = getfl50radec( img )
+		#astro_params['ra'], astro_params['dec'] = getfl50radec( img )
 
 		
 		if args.e < 0:

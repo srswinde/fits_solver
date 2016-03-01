@@ -30,15 +30,24 @@ class catcher(Client):
 				running = 0
 				self.client.close()
 				
-				fname = '{0}.fits'.format( time.asctime().replace(' ','_') )
+				fname = '/home/scott/data/50inch/20160229/{0}.fits'.format( time.asctime().replace(' ','_') )
 				print "writing fits file", fname
 				f=open( fname, 'wb' )
 				f.write( self.ALL )
 				f.close()
+				default_params = {
 				
-				astro_params['ra'], astro_params['dec'] = getfl50radec( img )
-				cmd = astrometry_cmd( fname, astro_params, astro_flags )
+				'scale-units': 'app',
+				'scale-low':0.2,
+				'scale-high':0.6,
+				'D':"/home/scott/data/50inch/20160229/astrometry"
 				
+				}
+
+				default_flags =  ['overwrite', 'crpix-center']
+				#astro_params['ra'], astro_params['dec'] = getfl50radec( img )
+				cmd = astrometry_cmd( fname, default_params, default_flags )
+				print cmd
 				#hdu = fits.PrimaryHDU(numpy.transpose(self.img))
 				#hdulist = fits.HDUList([hdu])
 				#hdulist.writeto('new.fits')
@@ -59,6 +68,7 @@ class catcher(Client):
 		
 	def getradec(self, img):
 			ra,dec = Angle( img[0].header['apra'] ), Angle( img[0].header['apdec'] )
+			
 			
 			
 s=Server(9996, handler=catcher)

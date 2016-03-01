@@ -9,19 +9,19 @@ import subprocess
 import shlex
 import collections
 import re
-from astro.angles import RA_angle, Dec_angle
+from astro.angles import RA_angle, Dec_angle, Angle
 
 
-"""
+
 default_params = {
-		'radius':5,
+		'radius':20,
 		'scale-units': 'app',
-		'scale-low':0.1,
-		'scale-high':2,
+		'scale-low':0.2,
+		'scale-high':1,
 }
 
 default_flags =  ['overwrite', 'crpix-center']
-"""
+
 class imenc( json.JSONEncoder ):
 
 	def default( self, obj ):
@@ -198,10 +198,15 @@ def getazcamradec(fd):
 	return (fd[0].header['ra'], fd[0].header['dec'])
 	
 
-	
-	
+def getfl50radec(fd):
+	radra = fd[0].header['apra']
+	raddec =  fd[0].header['apdec']
+
+	ra, dec = Angle(radra), Angle(raddec)
+
+	return(ra.Format("hours"), dec.Format("degarc180"))
 if __name__ == '__main__':
-	
+
 	parser = argparse.ArgumentParser(
 	description=
 """imsolve.py:
@@ -234,14 +239,15 @@ that we are all used to.
 	astro_params['dir'] = args.o
 		
 	if args.f:
+		
 		bname = args.f.split( '/' )[-1]
 		if '.fits' == bname[-5:]:
 			bname = bname[:-5]
 			
 		img = fits.open(args.f)
-		
-		astro_params['ra'], astro_params['dec'] = getazcamradec( img )
-		
+
+		#astro_params['ra'], astro_params['dec'] = getazcamradec( img )
+		astro_params['ra'], astro_params['dec'] = getfl50radec( img )
 
 		
 		if args.e < 0:

@@ -29,8 +29,9 @@ class catcher(Client):
 			else:
 				running = 0
 				self.client.close()
+				odir = "/home/scott/data/50inch/20160229/astrometry"
+				bname = '/home/scott/data/50inch/20160229/{0}'.format( time.asctime().replace(' ','_') )
 				
-				fname = '/home/scott/data/50inch/20160229/{0}.fits'.format( time.asctime().replace(' ','_') )
 				print "writing fits file", fname
 				f=open( fname, 'wb' )
 				f.write( self.ALL )
@@ -40,14 +41,15 @@ class catcher(Client):
 				'scale-units': 'app',
 				'scale-low':0.2,
 				'scale-high':0.6,
-				'D':"/home/scott/data/50inch/20160229/astrometry"
+				'D':odir
 				
 				}
 
 				default_flags =  ['overwrite', 'crpix-center']
 				#astro_params['ra'], astro_params['dec'] = getfl50radec( img )
 				cmd = astrometry_cmd( fname, default_params, default_flags )
-				print cmd
+				fits.open("{0}/")
+				self.client.close()
 				#hdu = fits.PrimaryHDU(numpy.transpose(self.img))
 				#hdulist = fits.HDUList([hdu])
 				#hdulist.writeto('new.fits')

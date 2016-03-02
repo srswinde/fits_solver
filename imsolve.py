@@ -9,12 +9,12 @@ import subprocess
 import shlex
 import collections
 import re
-from astro.angles import RA_angle, Dec_angle, Angle
+from astro.angles import RA_angle, Dec_angle, Angle, Deg10
 
 
 
 default_params = {
-		'radius':20,
+		'radius':5,
 		'scale-units': 'app',
 		'scale-low':0.2,
 		'scale-high':1,
@@ -202,7 +202,7 @@ def getfl50radec(fd):
 	radra = fd[0].header['apra']
 	raddec =  fd[0].header['apdec']
 
-	ra, dec = Angle(radra), Angle(raddec)
+	ra, dec = (Angle(radra)-Deg10(22.97)), Angle(raddec)
 
 	return(ra.Format("hours"), dec.Format("degarc180"))
 if __name__ == '__main__':
@@ -247,7 +247,7 @@ that we are all used to.
 		img = fits.open(args.f)
 
 		#astro_params['ra'], astro_params['dec'] = getazcamradec( img )
-		#astro_params['ra'], astro_params['dec'] = getfl50radec( img )
+		astro_params['ra'], astro_params['dec'] = getfl50radec( img )
 
 		
 		if args.e < 0:

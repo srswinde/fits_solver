@@ -202,7 +202,7 @@ def getfl50radec(fd):
 	radra = fd[0].header['apra']
 	raddec =  fd[0].header['apdec']
 
-	ra, dec = (Angle(radra)-Deg10(22.97)), Angle(raddec)
+	ra, dec = (Angle(radra)), Angle(raddec)
 
 	return(ra.Format("hours"), dec.Format("degarc180"))
 if __name__ == '__main__':

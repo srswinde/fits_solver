@@ -85,7 +85,7 @@ and make that information available for a
 	files = os.listdir( args.path )
 	for fname in files:
 		if fname[-3:] == 'wcs':
-			
+			pass
 
 
 

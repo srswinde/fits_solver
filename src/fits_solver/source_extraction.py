@@ -1,7 +1,7 @@
 import numpy as np
 import sep
 from astropy.io import fits
-import matplotlib.pyplot as plt
+
 import math
 from astro.angles import RA_angle, Dec_angle
 import tempfile
@@ -51,7 +51,7 @@ def getobjects( data ):
 	thresh = 5.0 * bkg.globalrms
 	objects = sep.extract(data, thresh)
 
-	print "there are ", len(objects), "objects"
+	#print "there are ", len(objects), "objects"
 	return objects
 	
 
@@ -73,10 +73,10 @@ def writetmpfits( img, extnum=2,  **tblargs ):
 
 	if type(img) == str:
 		img = fits.open( img )
-	ra,dec = img[0].header['ra'] , img[0].header['dec']
+	#ra,dec = img[0].header['ra'] , img[0].header['dec']
 
 
-	tbhdu = mkfitstable( getobjects( img[extnum].data ), ra, dec )
+	tbhdu = mkfitstable( getobjects( img[extnum].data ) )
 	
 	for key, val in tblargs.iteritems():
 		tbhdu.header[key] = val

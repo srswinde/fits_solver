@@ -5,11 +5,16 @@ from source_extraction import *
 import tempfile
 
 
-def main( imgname="ccd0163.fits", inDir='/home/scott/data', outDir="/home/scott/data/imserver" ):
+def main( imgname="ccd0163.fits", inDir='/home/scott/data', outDir="/home/scott/data/imserver", extnum=1, port ):
 
 	if inDir.endswith('/'): endDir = endDir[:-1]
 	if outDir.endswith('/'): outDir = outDir[:-1]
-	tname = writetmpfits( "{0}/{1}".format(inDir, imgname) )
+	path2fitsdata = "{0}/{1}".format(inDir, imgname)
+	img=fits.open(path2fits)
+	ra, dec = ra,dec = img[0].header['ra'] , img[0].header['dec']
+	
+	
+	tname = writetmpfits( img, extnum,  )
 	
 	
 	
@@ -54,7 +59,7 @@ def main( imgname="ccd0163.fits", inDir='/home/scott/data', outDir="/home/scott/
 	soc.close()
 	
 if __name__ == '__main__':
-	main()
+	main(port = 9001)
 
 
 

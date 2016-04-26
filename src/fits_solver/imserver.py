@@ -77,6 +77,7 @@ class catcher(Client):
 		bname = time.ctime().replace(" ", '_')
 		fitsfile = fits.open(fname)
 		ra,dec = self.getradec(fitsfile)
+		naxes = ( fitsfile[1]['naxis1'], fitsfile[1]['naxis2'] )
 		fitsfile.close()
 		
 		default_params = {
@@ -89,8 +90,8 @@ class catcher(Client):
 			'ra':ra,
 			'dec':dec,
 			'F': 1,
-			'w':	1024,
-			'e': 1024,
+			'w':	naxes[0],
+			'e': naxes[1],
 			'X': 'x',
 			'Y': 'y',
 			's':	'fwhm',
@@ -136,7 +137,7 @@ class catcher(Client):
 		
 if __name__ == "__main__":
 	port = int(sys.argv[1])
-	s=Server(9996, handler=catcher)
+	s=Server(port, handler=catcher)
 
 	s.run()
 

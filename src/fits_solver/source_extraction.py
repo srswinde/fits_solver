@@ -71,13 +71,18 @@ def mkfitstable( objects, ra, dec ):
 	return dtable
 		
 
-def writetmpfits( img ):
+def writetmpfits( img, ra, dec, extnum=1,  **tblargs ):
 
 	if type(img) == str:
 		img = fits.open( img )
 	ra,dec = img[0].header['ra'] , img[0].header['dec']
 
-	tbhdu = mkfitstable( getobjects( img[1].data ), ra, dec )
+	for key, val in tblarg.iter
+	tbhdu = mkfitstable( getobjects( img[extnum].data ), ra, dec )
+
+	for key, val in tblargs.iteritems():
+		tbhdu[1].header[key] = val
+	
 	tname = "{0}.fits".format( tempfile.mktemp() )
 	tbhdu.writeto(tname)
 	del tbhdu

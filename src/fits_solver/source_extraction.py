@@ -48,13 +48,14 @@ def getobjects( data ):
 
 	rms = bkg.rms()
 	bkg.subfrom(data)
-	thresh = 2.0 * bkg.globalrms
+	thresh = 5.0 * bkg.globalrms
 	objects = sep.extract(data, thresh)
 
+	print "there are ", len(objects), "objects"
 	return objects
 	
 
-def mkfitstable( objects, ra, dec ):
+def mkfitstable( objects ):
 	cols=[]
 	for name in ('x', 'y'):
 		cols.append( fits.Column(name=name, format='E', array=objects[name] ) )
@@ -64,29 +65,28 @@ def mkfitstable( objects, ra, dec ):
 	coldefs = fits.ColDefs( cols )
 	
 	dtable = fits.BinTableHDU.from_columns( coldefs )
-
-	dtable.header['ra'] = ra
-	dtable.header['dec'] = dec
 	
 	return dtable
 		
 
-def writetmpfits( img, ra, dec, extnum=1,  **tblargs ):
+def writetmpfits( img, extnum=2,  **tblargs ):
 
 	if type(img) == str:
 		img = fits.open( img )
 	ra,dec = img[0].header['ra'] , img[0].header['dec']
 
-	for key, val in tblarg.iter
-	tbhdu = mkfitstable( getobjects( img[extnum].data ), ra, dec )
 
+	tbhdu = mkfitstable( getobjects( img[extnum].data ), ra, dec )
+	
 	for key, val in tblargs.iteritems():
-		tbhdu[1].header[key] = val
+		tbhdu.header[key] = val
 	
 	tname = "{0}.fits".format( tempfile.mktemp() )
 	tbhdu.writeto(tname)
 	del tbhdu
 	img.close()
 	return tname
+
+
 	
 

@@ -3,24 +3,59 @@ import json
 import time
 from source_extraction import *
 import tempfile
+import sys
+import os
 
 
-def main( imgname="ccd0163.fits", inDir='/home/scott/data', outDir="/home/scott/data/imserver", extnum=1, port ):
+def main( imgname="test0021.fits", inDir='/home/bigobs/data/scott/26april16', outDir=None, extnum=1, port=9002, **headervals):
+
 
 	if inDir.endswith('/'): endDir = endDir[:-1]
-	if outDir.endswith('/'): outDir = outDir[:-1]
+	if outDir:	
+		if outDir.endswith('/'): outDir = outDir[:-1]
+	else:
+		outDir = "{0}/astrometry".format(inDir)
+
+	
+	
+
+	
+
+	if not os.path.exists(outDir):
+		os.makedirs(outDir)
+
 	path2fitsdata = "{0}/{1}".format(inDir, imgname)
-	img=fits.open(path2fits)
-	ra, dec = ra,dec = img[0].header['ra'] , img[0].header['dec']
+	img=fits.open(path2fitsdata)
+
+	#set up the tblargs
+	ra, dec = img[0].header['ra'] , img[0].header['dec']
+	naxis1, naxis2 = img[1].header['naxis1'], img[1].header['naxis2']
+
+	tblargs ={
+		'ra':ra,
+		'dec':dec,
+		'npix1':naxis1,
+		'npix2':naxis2,
+	}	
+
+	for key, val in headervals.iteritems():
+		tblargs[key] = val
 	
+	print tblargs
+	sources = getobjects( img[extnum].data )
+	fitstbl = mkfitstable( sources )
 	
-	tname = writetmpfits( img, extnum,  )
-	
-	
+	for key, val in tblargs.iteritems():
+		fitstbl.header[key] = val
+
+	tname = "{0}/{1}_{2}.axy".format(outDir, imgname.replace(".fits", ''), extnum)
+	print tname
+	fitstbl.writeto( tname )
+		
 	
 	f=open(tname, 'rb')
 
-	soc = scottSock( "nimoy", 9996  )
+	soc = scottSock( "nimoy", port  )
 
 	soc.send( f.read() )
 
@@ -49,7 +84,8 @@ def main( imgname="ccd0163.fits", inDir='/home/scott/data', outDir="/home/scott/
 				data+=soc.recv(val)
 				break
 	
-		tmpfd = open("table.{0}".format(key), 'wb')
+		print "{0}/{1}_{2}.{3}".format(outDir, imgname, extnum, key)
+		tmpfd = open("{0}/{1}_{2}.{3}".format(outDir, imgname, extnum, key), 'wb')
 		tmpfd.write( data )
 		tmpfd.close()
 
@@ -59,7 +95,8 @@ def main( imgname="ccd0163.fits", inDir='/home/scott/data', outDir="/home/scott/
 	soc.close()
 	
 if __name__ == '__main__':
-	main(port = 9001)
+	port = int(sys.argv[1])
+	main( port=port )
 
 
 

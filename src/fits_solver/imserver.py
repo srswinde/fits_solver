@@ -15,6 +15,7 @@ import sys
 class catcher(Client):
 	def __init__( self, (client, address) ):
 		Client.__init__( self, (client, address) )
+		print "Imclient connected"
 		self.size = 1024
 		self.count = 0
 		self.headerData = False
@@ -77,7 +78,7 @@ class catcher(Client):
 		bname = time.ctime().replace(" ", '_')
 		fitsfile = fits.open(fname)
 		ra,dec = self.getradec(fitsfile)
-		naxes = ( fitsfile[1]['naxis1'], fitsfile[1]['naxis2'] )
+		naxes = ( fitsfile[1].header['npix1'], fitsfile[1].header['npix2'] )
 		fitsfile.close()
 		
 		default_params = {

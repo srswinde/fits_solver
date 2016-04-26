@@ -9,6 +9,8 @@ import subprocess
 import os
 import select
 from astro.locales import mtlemmon
+import sys
+
 
 class catcher(Client):
 	def __init__( self, (client, address) ):
@@ -132,8 +134,9 @@ class catcher(Client):
 		
 		return metajson+filedata
 		
-		
-s=Server(9996, handler=catcher)
+if __name__ == "__main__":
+	port = int(sys.argv[1])
+	s=Server(9996, handler=catcher)
 
-s.run()
+	s.run()
 

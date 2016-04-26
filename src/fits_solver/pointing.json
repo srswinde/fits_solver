@@ -1,0 +1,828 @@
+[
+    {
+        "tcsdec": "+60:56:29.0", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "08:38:08.77", 
+        "imname": "pointing0012.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0012_ext1  --radius 5  --ra 08:38:08.77  -6 1  --dec +60:56:29.0  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0012.fits"
+    }, 
+    {
+        "tcsdec": "+55:03:46.9", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "08:29:12.11", 
+        "imname": "pointing0013.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0013_ext1  --radius 5  --ra 08:29:12.11  -6 1  --dec +55:03:46.9  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0013.fits"
+    }, 
+    {
+        "tcsdec": "+47:15:47.0", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "08:24:33.56", 
+        "imname": "pointing0014.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0014_ext1  --radius 5  --ra 08:24:33.56  -6 1  --dec +47:15:47.0  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0014.fits"
+    }, 
+    {
+        "tcsdec": "+42:35:50.4", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "08:14:15.40", 
+        "imname": "pointing0015.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0015_ext1  --radius 5  --ra 08:14:15.40  -6 1  --dec +42:35:50.4  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0015.fits"
+    }, 
+    {
+        "tcsdec": "+36:23:28.2", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "08:02:52.34", 
+        "imname": "pointing0016.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0016_ext1  --radius 5  --ra 08:02:52.34  -6 1  --dec +36:23:28.2  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0016.fits"
+    }, 
+    {
+        "tcsdec": "+30:46:30.0", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "07:58:40.16", 
+        "imname": "pointing0017.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0017_ext1  --radius 5  --ra 07:58:40.16  -6 1  --dec +30:46:30.0  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0017.fits"
+    }, 
+    {
+        "tcsdec": "+26:49:01.6", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "07:58:00.66", 
+        "imname": "pointing0018.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0018_ext1  --radius 5  --ra 07:58:00.66  -6 1  --dec +26:49:01.6  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0018.fits"
+    }, 
+    {
+        "tcsdec": "+20:35:34.3", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "07:53:10.11", 
+        "imname": "pointing0019.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0019_ext1  --radius 5  --ra 07:53:10.11  -6 1  --dec +20:35:34.3  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0019.fits"
+    }, 
+    {
+        "tcsdec": "+13:32:21.5", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "07:55:34.13", 
+        "imname": "pointing0020.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0020_ext1  --radius 5  --ra 07:55:34.13  -6 1  --dec +13:32:21.5  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0020.fits"
+    }, 
+    {
+        "tcsdec": "+10:49:49.3", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "07:49:04.74", 
+        "imname": "pointing0021.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0021_ext1  --radius 5  --ra 07:49:04.74  -6 1  --dec +10:49:49.3  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0021.fits"
+    }, 
+    {
+        "tcsdec": "+05:47:54.9", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "07:46:18.48", 
+        "imname": "pointing0022.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0022_ext1  --radius 5  --ra 07:46:18.48  -6 1  --dec +05:47:54.9  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0022.fits"
+    }, 
+    {
+        "tcsdec": "+00:20:43.5", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "07:46:35.16", 
+        "imname": "pointing0023.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0023_ext1  --radius 5  --ra 07:46:35.16  -6 1  --dec +00:20:43.5  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0023.fits"
+    }, 
+    {
+        "tcsdec": "-04:18:45.4", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "07:43:18.71", 
+        "imname": "pointing0024.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0024_ext1  --radius 5  --ra 07:43:18.71  -6 1  --dec -04:18:45.4  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0024.fits"
+    }, 
+    {
+        "tcsdec": "-28:31:06.4", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "06:09:27.27", 
+        "imname": "pointing0025.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0025_ext1  --radius 5  --ra 06:09:27.27  -6 1  --dec -28:31:06.4  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0025.fits"
+    }, 
+    {
+        "tcsdec": "-28:06:59.8", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "06:04:01.27", 
+        "imname": "pointing0026.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0026_ext1  --radius 5  --ra 06:04:01.27  -6 1  --dec -28:06:59.8  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0026.fits"
+    }, 
+    {
+        "tcsdec": "-26:29:59.3", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "05:44:29.55", 
+        "imname": "pointing0027.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0027_ext1  --radius 5  --ra 05:44:29.55  -6 1  --dec -26:29:59.3  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0027.fits"
+    }, 
+    {
+        "tcsdec": "-24:49:09.6", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "05:38:26.36", 
+        "imname": "pointing0028.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0028_ext1  --radius 5  --ra 05:38:26.36  -6 1  --dec -24:49:09.6  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0028.fits"
+    }, 
+    {
+        "tcsdec": "-21:54:01.3", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "05:27:35.31", 
+        "imname": "pointing0029.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0029_ext1  --radius 5  --ra 05:27:35.31  -6 1  --dec -21:54:01.3  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0029.fits"
+    }, 
+    {
+        "tcsdec": "-19:43:16.4", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "05:29:05.63", 
+        "imname": "pointing0030.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0030_ext1  --radius 5  --ra 05:29:05.63  -6 1  --dec -19:43:16.4  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0030.fits"
+    }, 
+    {
+        "tcsdec": "-14:39:44.0", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "05:31:22.75", 
+        "imname": "pointing0031.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0031_ext1  --radius 5  --ra 05:31:22.75  -6 1  --dec -14:39:44.0  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0031.fits"
+    }, 
+    {
+        "tcsdec": "-12:23:54.1", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "05:26:19.64", 
+        "imname": "pointing0032.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0032_ext1  --radius 5  --ra 05:26:19.64  -6 1  --dec -12:23:54.1  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0032.fits"
+    }, 
+    {
+        "tcsdec": "-07:28:41.3", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "05:31:32.53", 
+        "imname": "pointing0033.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0033_ext1  --radius 5  --ra 05:31:32.53  -6 1  --dec -07:28:41.3  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0033.fits"
+    }, 
+    {
+        "tcsdec": "-03:00:24.5", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "05:36:22.27", 
+        "imname": "pointing0034.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0034_ext1  --radius 5  --ra 05:36:22.27  -6 1  --dec -03:00:24.5  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0034.fits"
+    }, 
+    {
+        "tcsdec": "+01:43:10.7", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "05:43:21.56", 
+        "imname": "pointing0035.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0035_ext1  --radius 5  --ra 05:43:21.56  -6 1  --dec +01:43:10.7  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0035.fits"
+    }, 
+    {
+        "tcsdec": "+06:06:23.6", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "05:49:01.20", 
+        "imname": "pointing0036.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0036_ext1  --radius 5  --ra 05:49:01.20  -6 1  --dec +06:06:23.6  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0036.fits"
+    }, 
+    {
+        "tcsdec": "+13:17:00.2", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "05:59:38.40", 
+        "imname": "pointing0037.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0037_ext1  --radius 5  --ra 05:59:38.40  -6 1  --dec +13:17:00.2  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0037.fits"
+    }, 
+    {
+        "tcsdec": "+18:08:34.7", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "06:08:44.01", 
+        "imname": "pointing0038.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0038_ext1  --radius 5  --ra 06:08:44.01  -6 1  --dec +18:08:34.7  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0038.fits"
+    }, 
+    {
+        "tcsdec": "+24:27:59.2", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "06:30:51.45", 
+        "imname": "pointing0039.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0039_ext1  --radius 5  --ra 06:30:51.45  -6 1  --dec +24:27:59.2  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0039.fits"
+    }, 
+    {
+        "tcsdec": "+28:48:05.3", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "06:44:14.85", 
+        "imname": "pointing0040.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0040_ext1  --radius 5  --ra 06:44:14.85  -6 1  --dec +28:48:05.3  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0040.fits"
+    }, 
+    {
+        "tcsdec": "+34:46:43.0", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "07:05:53.36", 
+        "imname": "pointing0041.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0041_ext1  --radius 5  --ra 07:05:53.36  -6 1  --dec +34:46:43.0  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0041.fits"
+    }, 
+    {
+        "tcsdec": "+39:38:05.3", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "07:25:59.48", 
+        "imname": "pointing0042.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0042_ext1  --radius 5  --ra 07:25:59.48  -6 1  --dec +39:38:05.3  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0042.fits"
+    }, 
+    {
+        "tcsdec": "+45:21:44.8", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "07:45:48.90", 
+        "imname": "pointing0043.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0043_ext1  --radius 5  --ra 07:45:48.90  -6 1  --dec +45:21:44.8  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0043.fits"
+    }, 
+    {
+        "tcsdec": "+51:58:34.7", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "08:05:17.43", 
+        "imname": "pointing0044.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0044_ext1  --radius 5  --ra 08:05:17.43  -6 1  --dec +51:58:34.7  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0044.fits"
+    }, 
+    {
+        "tcsdec": "-26:34:38.7", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "03:25:36.05", 
+        "imname": "pointing0045.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0045_ext1  --radius 5  --ra 03:25:36.05  -6 1  --dec -26:34:38.7  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0045.fits"
+    }, 
+    {
+        "tcsdec": "-28:06:59.9", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "02:59:46.58", 
+        "imname": "pointing0046.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0046_ext1  --radius 5  --ra 02:59:46.58  -6 1  --dec -28:06:59.9  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0046.fits"
+    }, 
+    {
+        "tcsdec": "-25:24:08.0", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "02:43:05.22", 
+        "imname": "pointing0047.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0047_ext1  --radius 5  --ra 02:43:05.22  -6 1  --dec -25:24:08.0  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0047.fits"
+    }, 
+    {
+        "tcsdec": "-24:46:09.7", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "02:17:06.38", 
+        "imname": "pointing0048.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0048_ext1  --radius 5  --ra 02:17:06.38  -6 1  --dec -24:46:09.7  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0048.fits"
+    }, 
+    {
+        "tcsdec": "-21:37:56.1", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "01:55:08.94", 
+        "imname": "pointing0049.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0049_ext1  --radius 5  --ra 01:55:08.94  -6 1  --dec -21:37:56.1  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0049.fits"
+    }, 
+    {
+        "tcsdec": "-18:53:35.4", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "01:33:15.60", 
+        "imname": "pointing0050.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0050_ext1  --radius 5  --ra 01:33:15.60  -6 1  --dec -18:53:35.4  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0050.fits"
+    }, 
+    {
+        "tcsdec": "-16:15:58.9", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "01:02:13.05", 
+        "imname": "pointing0051.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0051_ext1  --radius 5  --ra 01:02:13.05  -6 1  --dec -16:15:58.9  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0051.fits"
+    }, 
+    {
+        "tcsdec": "-13:32:30.9", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "00:48:57.90", 
+        "imname": "pointing0052.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0052_ext1  --radius 5  --ra 00:48:57.90  -6 1  --dec -13:32:30.9  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0052.fits"
+    }, 
+    {
+        "tcsdec": "-08:10:39.0", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "00:26:22.13", 
+        "imname": "pointing0053.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0053_ext1  --radius 5  --ra 00:26:22.13  -6 1  --dec -08:10:39.0  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0053.fits"
+    }, 
+    {
+        "tcsdec": "-03:39:44.2", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "00:15:59.76", 
+        "imname": "pointing0054.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0054_ext1  --radius 5  --ra 00:15:59.76  -6 1  --dec -03:39:44.2  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0054.fits"
+    }, 
+    {
+        "tcsdec": "+02:19:17.4", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "00:02:38.98", 
+        "imname": "pointing0055.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0055_ext1  --radius 5  --ra 00:02:38.98  -6 1  --dec +02:19:17.4  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0055.fits"
+    }, 
+    {
+        "tcsdec": "+04:39:40.5", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "23:46:55.14", 
+        "imname": "pointing0056.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0056_ext1  --radius 5  --ra 23:46:55.14  -6 1  --dec +04:39:40.5  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0056.fits"
+    }, 
+    {
+        "tcsdec": "+11:33:48.5", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "23:39:22.14", 
+        "imname": "pointing0057.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0057_ext1  --radius 5  --ra 23:39:22.14  -6 1  --dec +11:33:48.5  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0057.fits"
+    }, 
+    {
+        "tcsdec": "+16:01:37.2", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "23:29:47.25", 
+        "imname": "pointing0058.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0058_ext1  --radius 5  --ra 23:29:47.25  -6 1  --dec +16:01:37.2  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0058.fits"
+    }, 
+    {
+        "tcsdec": "+20:28:44.9", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "23:11:25.70", 
+        "imname": "pointing0059.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0059_ext1  --radius 5  --ra 23:11:25.70  -6 1  --dec +20:28:44.9  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0059.fits"
+    }, 
+    {
+        "tcsdec": "+27:36:17.7", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "23:07:32.24", 
+        "imname": "pointing0060.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0060_ext1  --radius 5  --ra 23:07:32.24  -6 1  --dec +27:36:17.7  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0060.fits"
+    }, 
+    {
+        "tcsdec": "+32:22:17.3", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "22:59:34.01", 
+        "imname": "pointing0061.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0061_ext1  --radius 5  --ra 22:59:34.01  -6 1  --dec +32:22:17.3  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0061.fits"
+    }, 
+    {
+        "tcsdec": "+37:40:48.4", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "22:45:39.44", 
+        "imname": "pointing0062.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0062_ext1  --radius 5  --ra 22:45:39.44  -6 1  --dec +37:40:48.4  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0062.fits"
+    }, 
+    {
+        "tcsdec": "+43:25:17.1", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "22:36:19.84", 
+        "imname": "pointing0063.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0063_ext1  --radius 5  --ra 22:36:19.84  -6 1  --dec +43:25:17.1  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0063.fits"
+    }, 
+    {
+        "tcsdec": "+50:03:07.2", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "22:25:30.98", 
+        "imname": "pointing0064.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0064_ext1  --radius 5  --ra 22:25:30.98  -6 1  --dec +50:03:07.2  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0064.fits"
+    }, 
+    {
+        "tcsdec": "+55:03:47.6", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "22:17:24.41", 
+        "imname": "pointing0065.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0065_ext1  --radius 5  --ra 22:17:24.41  -6 1  --dec +55:03:47.6  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0065.fits"
+    }, 
+    {
+        "tcsdec": "-17:34:42.8", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "03:52:45.24", 
+        "imname": "pointing0066.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0066_ext1  --radius 5  --ra 03:52:45.24  -6 1  --dec -17:34:42.8  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0066.fits"
+    }, 
+    {
+        "tcsdec": "-16:59:41.9", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "03:19:46.92", 
+        "imname": "pointing0067.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0067_ext1  --radius 5  --ra 03:19:46.92  -6 1  --dec -16:59:41.9  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0067.fits"
+    }, 
+    {
+        "tcsdec": "-16:26:13.1", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "02:51:29.85", 
+        "imname": "pointing0068.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0068_ext1  --radius 5  --ra 02:51:29.85  -6 1  --dec -16:26:13.1  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0068.fits"
+    }, 
+    {
+        "tcsdec": "-13:20:40.9", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "02:19:24.94", 
+        "imname": "pointing0069.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0069_ext1  --radius 5  --ra 02:19:24.94  -6 1  --dec -13:20:40.9  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0069.fits"
+    }, 
+    {
+        "tcsdec": "-09:55:59.0", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "01:55:23.61", 
+        "imname": "pointing0070.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0070_ext1  --radius 5  --ra 01:55:23.61  -6 1  --dec -09:55:59.0  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0070.fits"
+    }, 
+    {
+        "tcsdec": "-04:04:39.2", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "01:31:12.84", 
+        "imname": "pointing0071.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0071_ext1  --radius 5  --ra 01:31:12.84  -6 1  --dec -04:04:39.2  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0071.fits"
+    }, 
+    {
+        "tcsdec": "+01:06:19.4", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "01:04:57.91", 
+        "imname": "pointing0072.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0072_ext1  --radius 5  --ra 01:04:57.91  -6 1  --dec +01:06:19.4  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0072.fits"
+    }, 
+    {
+        "tcsdec": "+07:41:16.5", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "00:54:25.40", 
+        "imname": "pointing0073.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0073_ext1  --radius 5  --ra 00:54:25.40  -6 1  --dec +07:41:16.5  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0073.fits"
+    }, 
+    {
+        "tcsdec": "+13:34:31.1", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "00:29:31.67", 
+        "imname": "pointing0074.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0074_ext1  --radius 5  --ra 00:29:31.67  -6 1  --dec +13:34:31.1  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0074.fits"
+    }, 
+    {
+        "tcsdec": "+20:09:20.1", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "00:20:18.39", 
+        "imname": "pointing0075.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0075_ext1  --radius 5  --ra 00:20:18.39  -6 1  --dec +20:09:20.1  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0075.fits"
+    }, 
+    {
+        "tcsdec": "+27:54:07.6", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "00:06:45.48", 
+        "imname": "pointing0076.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0076_ext1  --radius 5  --ra 00:06:45.48  -6 1  --dec +27:54:07.6  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0076.fits"
+    }, 
+    {
+        "tcsdec": "+34:27:15.6", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "23:57:43.08", 
+        "imname": "pointing0077.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0077_ext1  --radius 5  --ra 23:57:43.08  -6 1  --dec +34:27:15.6  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0077.fits"
+    }, 
+    {
+        "tcsdec": "+42:05:08.5", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "23:54:58.65", 
+        "imname": "pointing0078.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0078_ext1  --radius 5  --ra 23:54:58.65  -6 1  --dec +42:05:08.5  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0078.fits"
+    }, 
+    {
+        "tcsdec": "+49:29:10.7", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "23:44:26.28", 
+        "imname": "pointing0079.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0079_ext1  --radius 5  --ra 23:44:26.28  -6 1  --dec +49:29:10.7  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0079.fits"
+    }, 
+    {
+        "tcsdec": "+57:52:00.5", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "23:50:46.76", 
+        "imname": "pointing0080.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0080_ext1  --radius 5  --ra 23:50:46.76  -6 1  --dec +57:52:00.5  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0080.fits"
+    }, 
+    {
+        "tcsdec": "-08:35:04.3", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "04:04:44.02", 
+        "imname": "pointing0081.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0081_ext1  --radius 5  --ra 04:04:44.02  -6 1  --dec -08:35:04.3  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0081.fits"
+    }, 
+    {
+        "tcsdec": "-06:12:26.0", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "03:43:52.35", 
+        "imname": "pointing0082.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0082_ext1  --radius 5  --ra 03:43:52.35  -6 1  --dec -06:12:26.0  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0082.fits"
+    }, 
+    {
+        "tcsdec": "-06:39:13.1", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "03:15:14.77", 
+        "imname": "pointing0083.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0083_ext1  --radius 5  --ra 03:15:14.77  -6 1  --dec -06:39:13.1  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0083.fits"
+    }, 
+    {
+        "tcsdec": "-02:13:22.5", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "02:52:39.16", 
+        "imname": "pointing0084.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0084_ext1  --radius 5  --ra 02:52:39.16  -6 1  --dec -02:13:22.5  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0084.fits"
+    }, 
+    {
+        "tcsdec": "-01:07:42.9", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "02:29:28.25", 
+        "imname": "pointing0085.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0085_ext1  --radius 5  --ra 02:29:28.25  -6 1  --dec -01:07:42.9  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0085.fits"
+    }, 
+    {
+        "tcsdec": "+02:21:44.9", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "02:11:18.45", 
+        "imname": "pointing0086.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0086_ext1  --radius 5  --ra 02:11:18.45  -6 1  --dec +02:21:44.9  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0086.fits"
+    }, 
+    {
+        "tcsdec": "+06:51:10.6", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "01:53:00.94", 
+        "imname": "pointing0087.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0087_ext1  --radius 5  --ra 01:53:00.94  -6 1  --dec +06:51:10.6  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0087.fits"
+    }, 
+    {
+        "tcsdec": "+11:53:36.3", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "01:36:54.80", 
+        "imname": "pointing0088.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0088_ext1  --radius 5  --ra 01:36:54.80  -6 1  --dec +11:53:36.3  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0088.fits"
+    }, 
+    {
+        "tcsdec": "+17:53:05.8", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "01:26:41.92", 
+        "imname": "pointing0089.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0089_ext1  --radius 5  --ra 01:26:41.92  -6 1  --dec +17:53:05.8  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0089.fits"
+    }, 
+    {
+        "tcsdec": "+23:51:50.2", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "01:10:23.11", 
+        "imname": "pointing0090.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0090_ext1  --radius 5  --ra 01:10:23.11  -6 1  --dec +23:51:50.2  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0090.fits"
+    }, 
+    {
+        "tcsdec": "+30:35:13.7", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "01:10:28.77", 
+        "imname": "pointing0091.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0091_ext1  --radius 5  --ra 01:10:28.77  -6 1  --dec +30:35:13.7  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0091.fits"
+    }, 
+    {
+        "tcsdec": "+36:07:31.5", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "01:05:48.66", 
+        "imname": "pointing0092.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0092_ext1  --radius 5  --ra 01:05:48.66  -6 1  --dec +36:07:31.5  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0092.fits"
+    }, 
+    {
+        "tcsdec": "+42:21:16.4", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "00:58:23.78", 
+        "imname": "pointing0093.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0093_ext1  --radius 5  --ra 00:58:23.78  -6 1  --dec +42:21:16.4  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0093.fits"
+    }, 
+    {
+        "tcsdec": "+49:24:53.3", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "01:00:41.83", 
+        "imname": "pointing0094.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0094_ext1  --radius 5  --ra 01:00:41.83  -6 1  --dec +49:24:53.3  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0094.fits"
+    }, 
+    {
+        "tcsdec": "+55:26:35.1", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "01:16:25.50", 
+        "imname": "pointing0095.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0095_ext1  --radius 5  --ra 01:16:25.50  -6 1  --dec +55:26:35.1  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0095.fits"
+    }, 
+    {
+        "tcsdec": "+57:54:29.9", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "08:50:06.89", 
+        "imname": "pointing0096.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0096_ext1  --radius 5  --ra 08:50:06.89  -6 1  --dec +57:54:29.9  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0096.fits"
+    }, 
+    {
+        "tcsdec": "+49:22:50.6", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "08:48:30.82", 
+        "imname": "pointing0097.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0097_ext1  --radius 5  --ra 08:48:30.82  -6 1  --dec +49:22:50.6  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0097.fits"
+    }, 
+    {
+        "tcsdec": "+41:09:14.3", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "08:36:22.58", 
+        "imname": "pointing0098.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0098_ext1  --radius 5  --ra 08:36:22.58  -6 1  --dec +41:09:14.3  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0098.fits"
+    }, 
+    {
+        "tcsdec": "+33:43:05.3", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "08:28:07.12", 
+        "imname": "pointing0099.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0099_ext1  --radius 5  --ra 08:28:07.12  -6 1  --dec +33:43:05.3  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0099.fits"
+    }, 
+    {
+        "tcsdec": "+26:49:48.9", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "08:13:27.58", 
+        "imname": "pointing0100.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0100_ext1  --radius 5  --ra 08:13:27.58  -6 1  --dec +26:49:48.9  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0100.fits"
+    }, 
+    {
+        "tcsdec": "+19:01:12.2", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "08:08:53.17", 
+        "imname": "pointing0101.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0101_ext1  --radius 5  --ra 08:08:53.17  -6 1  --dec +19:01:12.2  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0101.fits"
+    }, 
+    {
+        "tcsdec": "+12:14:57.3", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "07:54:00.55", 
+        "imname": "pointing0102.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0102_ext1  --radius 5  --ra 07:54:00.55  -6 1  --dec +12:14:57.3  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0102.fits"
+    }, 
+    {
+        "tcsdec": "+05:52:05.7", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "07:36:59.06", 
+        "imname": "pointing0103.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0103_ext1  --radius 5  --ra 07:36:59.06  -6 1  --dec +05:52:05.7  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0103.fits"
+    }, 
+    {
+        "tcsdec": "+01:53:53.9", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "07:13:56.55", 
+        "imname": "pointing0104.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0104_ext1  --radius 5  --ra 07:13:56.55  -6 1  --dec +01:53:53.9  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0104.fits"
+    }, 
+    {
+        "tcsdec": "-04:34:15.7", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "06:53:16.01", 
+        "imname": "pointing0105.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0105_ext1  --radius 5  --ra 06:53:16.01  -6 1  --dec -04:34:15.7  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0105.fits"
+    }, 
+    {
+        "tcsdec": "-08:14:59.4", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "06:34:28.15", 
+        "imname": "pointing0106.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0106_ext1  --radius 5  --ra 06:34:28.15  -6 1  --dec -08:14:59.4  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0106.fits"
+    }, 
+    {
+        "tcsdec": "-11:12:41.0", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "06:06:39.22", 
+        "imname": "pointing0107.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0107_ext1  --radius 5  --ra 06:06:39.22  -6 1  --dec -11:12:41.0  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0107.fits"
+    }, 
+    {
+        "tcsdec": "-14:04:13.4", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "05:38:55.54", 
+        "imname": "pointing0108.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0108_ext1  --radius 5  --ra 05:38:55.54  -6 1  --dec -14:04:13.4  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0108.fits"
+    }, 
+    {
+        "tcsdec": "-16:00:23.9", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "05:06:23.89", 
+        "imname": "pointing0109.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0109_ext1  --radius 5  --ra 05:06:23.89  -6 1  --dec -16:00:23.9  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0109.fits"
+    }, 
+    {
+        "tcsdec": "+56:19:21.7", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "06:32:47.34", 
+        "imname": "pointing0110.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0110_ext1  --radius 5  --ra 06:32:47.34  -6 1  --dec +56:19:21.7  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0110.fits"
+    }, 
+    {
+        "tcsdec": "+42:28:33.6", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "07:03:22.04", 
+        "imname": "pointing0111.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0111_ext1  --radius 5  --ra 07:03:22.04  -6 1  --dec +42:28:33.6  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0111.fits"
+    }, 
+    {
+        "tcsdec": "+27:50:40.5", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "07:03:03.87", 
+        "imname": "pointing0112.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0112_ext1  --radius 5  --ra 07:03:03.87  -6 1  --dec +27:50:40.5  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0112.fits"
+    }, 
+    {
+        "tcsdec": "+15:41:22.4", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "06:26:09.42", 
+        "imname": "pointing0113.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0113_ext1  --radius 5  --ra 06:26:09.42  -6 1  --dec +15:41:22.4  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0113.fits"
+    }, 
+    {
+        "tcsdec": "+04:58:46.9", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "05:44:23.98", 
+        "imname": "pointing0114.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0114_ext1  --radius 5  --ra 05:44:23.98  -6 1  --dec +04:58:46.9  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0114.fits"
+    }, 
+    {
+        "tcsdec": "+53:24:55.8", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "04:43:36.76", 
+        "imname": "pointing0115.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0115_ext1  --radius 5  --ra 04:43:36.76  -6 1  --dec +53:24:55.8  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0115.fits"
+    }, 
+    {
+        "tcsdec": "+40:06:39.3", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "06:11:48.40", 
+        "imname": "pointing0116.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0116_ext1  --radius 5  --ra 06:11:48.40  -6 1  --dec +40:06:39.3  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0116.fits"
+    }, 
+    {
+        "tcsdec": "+21:40:49.3", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "05:57:04.10", 
+        "imname": "pointing0117.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0117_ext1  --radius 5  --ra 05:57:04.10  -6 1  --dec +21:40:49.3  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0117.fits"
+    }, 
+    {
+        "tcsdec": "+22:34:51.5", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "02:36:56.32", 
+        "imname": "pointing0118.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0118_ext1  --radius 5  --ra 02:36:56.32  -6 1  --dec +22:34:51.5  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0118.fits"
+    }, 
+    {
+        "tcsdec": "+31:50:13.4", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "02:24:46.16", 
+        "imname": "pointing0119.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0119_ext1  --radius 5  --ra 02:24:46.16  -6 1  --dec +31:50:13.4  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0119.fits"
+    }, 
+    {
+        "tcsdec": "+42:36:02.2", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "02:23:41.11", 
+        "imname": "pointing0120.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0120_ext1  --radius 5  --ra 02:23:41.11  -6 1  --dec +42:36:02.2  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0120.fits"
+    }, 
+    {
+        "tcsdec": "+52:23:52.0", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "02:49:41.47", 
+        "imname": "pointing0121.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0121_ext1  --radius 5  --ra 02:49:41.47  -6 1  --dec +52:23:52.0  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0121.fits"
+    }, 
+    {
+        "tcsdec": "+58:35:12.2", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "03:40:38.26", 
+        "imname": "pointing0122.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0122_ext1  --radius 5  --ra 03:40:38.26  -6 1  --dec +58:35:12.2  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0122.fits"
+    }, 
+    {
+        "tcsdec": "+26:16:39.7", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "03:23:25.43", 
+        "imname": "pointing0123.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0123_ext1  --radius 5  --ra 03:23:25.43  -6 1  --dec +26:16:39.7  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0123.fits"
+    }, 
+    {
+        "tcsdec": "+33:17:28.3", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "03:21:45.08", 
+        "imname": "pointing0124.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0124_ext1  --radius 5  --ra 03:21:45.08  -6 1  --dec +33:17:28.3  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0124.fits"
+    }, 
+    {
+        "tcsdec": "+40:25:16.9", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "03:32:01.36", 
+        "imname": "pointing0125.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0125_ext1  --radius 5  --ra 03:32:01.36  -6 1  --dec +40:25:16.9  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0125.fits"
+    }, 
+    {
+        "tcsdec": "+46:43:42.1", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "03:45:46.98", 
+        "imname": "pointing0126.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0126_ext1  --radius 5  --ra 03:45:46.98  -6 1  --dec +46:43:42.1  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0126.fits"
+    }, 
+    {
+        "tcsdec": "+50:57:41.4", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "04:19:11.22", 
+        "imname": "pointing0127.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0127_ext1  --radius 5  --ra 04:19:11.22  -6 1  --dec +50:57:41.4  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0127.fits"
+    }, 
+    {
+        "tcsdec": "+52:52:11.3", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "04:56:07.11", 
+        "imname": "pointing0128.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0128_ext1  --radius 5  --ra 04:56:07.11  -6 1  --dec +52:52:11.3  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0128.fits"
+    }, 
+    {
+        "tcsdec": "+54:25:43.1", 
+        "path": "/home/scott/data/flexmap", 
+        "tcsra": "05:36:33.19", 
+        "imname": "pointing0129.fits", 
+        "cmd_ext1": "solve-field  --scale-units app  --scale-low 0.1  --scale-high 0.6  -o pointing0129_ext1  --radius 5  --ra 05:36:33.19  -6 1  --dec +54:25:43.1  --dir astrometry  --overwrite  --crpix-center  /home/scott/data/flexmap/pointing0129.fits"
+    }
+]

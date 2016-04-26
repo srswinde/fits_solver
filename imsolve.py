@@ -188,7 +188,8 @@ def astrometry_cmd(fname, params={}, flags=[]):
 
 
 
-	return "solve-field {0} {1}".format( args, fname )
+	return "/usr/local/astrometry_net/bin/solve-field {0} {1}".format( args, fname )
+	#return "solve-field {0} {1}".format( args, fname )
 	
 	
 

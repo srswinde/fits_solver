@@ -5,7 +5,7 @@ from source_extraction import *
 import tempfile
 
 
-def main( imgname="pointing0032.fits", inDir='/home/scott/data/flexdata', outDir="/home/scott/imserver" ):
+def main( imgname="pointing0032.fits", inDir='/home/sswindell/data/images/flexdata', outDir="/home/sswindell/data/imserver" ):
 
 	if inDir.endswith('/'): endDir = endDir[:-1]
 	if outDir.endswith('/'): outDir = outDir[:-1]

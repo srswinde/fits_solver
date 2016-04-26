@@ -8,6 +8,8 @@ import shlex
 import subprocess
 import os
 import select
+from astro.locales import mtlemmon
+
 class catcher(Client):
 	def __init__( self, (client, address) ):
 		Client.__init__( self, (client, address) )
@@ -21,7 +23,7 @@ class catcher(Client):
 		self.y = 0
 		self.dCount = 0
 		self.client.settimeout( 0.5 )
-		#self.img = numpy.zeros((765, 510), dtype=numpy.int)
+		#self.img = numpy.zeros( ( 765, 510 ), dtype=numpy.int )
 		self.ALL = ""
 		
 	def run(self):
@@ -64,12 +66,12 @@ class catcher(Client):
 		
 		return 1
 		
-	def getradec(self, img):
+	def getradec( self, img ):
 			return img[1].header['ra'] , img[1].header['dec'] 
 			
 	
 	def solve(self, fname):
-		odir = "/home/scott/data/imserver"
+		odir = "/home/sswindell/data/imserver"
 		bname = time.ctime().replace(" ", '_')
 		fitsfile = fits.open(fname)
 		ra,dec = self.getradec(fitsfile)
@@ -85,8 +87,8 @@ class catcher(Client):
 			'ra':ra,
 			'dec':dec,
 			'F': 1,
-			'w':	2048,
-			'e': 4096,
+			'w':	1024,
+			'e': 1024,
 			'X': 'x',
 			'Y': 'y',
 			's':	'fwhm',
@@ -101,29 +103,37 @@ class catcher(Client):
 			subprocess.check_output( shlex.split( cmd ) )
 			
 		except Exception as err:
+			
 			print err
-		
+			
+		print bname
 		metadata = {}
+		metadata['files']={}
 		filedata = ""
-		if os.path.exists( "{0}/{1}.solved".format(odir, bname) ):
+		
+		if os.path.exists( "{0}/{1}.solved".format( odir, bname ) ):
 			for ftype in ["wcs", "rdls", "corr", "match"]:
 				tmpfd = open("{0}/{1}.{2}".format(odir, bname, ftype ), "rb" )
+				if ftype == 'wcs':
+					tmpfitsfd = fits.open(  tmpfd )
+					metadata['ra'], metadata['dec'] = RA_angle( Deg10( tmpfitsfd[0].header['crval1'] ) ).Format("hours"), Dec_angle( Deg10( tmpfitsfd[0].header['crval2'] ) ).Format( "degarc180" )
 				fdata = tmpfd.read()
 				tmpfd.close()
 				
-				metadata[ftype] = len( fdata )
+				metadata['files'][ftype] = len( fdata )
 				filedata+=fdata
 				del fdata
+			print "Solved"
 				
-				
-			metajson = json.dumps( metadata )
-			metajson = metajson+(128-len(metajson))*" "
+		
+		
+		metajson = json.dumps( metadata )
+		metajson = metajson+(256-len(metajson))*" "
 		
 		return metajson+filedata
-		
-	
 		
 		
 s=Server(9996, handler=catcher)
 
 s.run()
+

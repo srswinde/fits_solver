@@ -12,6 +12,9 @@ from astro.angles import RA_angle, Dec_angle, Deg10, Angle
 from astro.locales import mtlemmon
 from astro.astrodate import starDate
 
+<<<<<<< HEAD
+def main( imgname="subn4.fits", inDir='/home/apt/images', outDir="astrometry", extnum=0, port=9002, **headervals):
+=======
 example = {
                   "amp11Dec": "+85:05:02.77",
         "amp11RA": "08:21:46.83",
@@ -30,9 +33,43 @@ example = {
 
 
 def main( imgname="20160423_080719_n45.fits", inDir='/home/scott/data/lemfl50', outDir="astrometry", line=True ):
+>>>>>>> 4754d2981c88a9f699945b80a3a60f888f70870a
 
-	if inDir.endswith('/'): endDir = endDir[:-1]
+	if inDir.endswith('/'): inDir = inDir[:-1]
 	if outDir.endswith('/'): outDir = outDir[:-1]
+<<<<<<< HEAD
+	#tname = writetmpfits( "{0}/{1}".format(inDir, imgname ) )
+	 
+	if not os.path.exists(outDir):	
+		os.mkdir( outDir )
+	fitsfd = fits.open("{0}/{1}".format(inDir, imgname))
+	telra, teldec = Angle( fitsfd[0].header['apra'] ).Format("hours"), Angle( fitsfd[0].header['apdec'] ).Format("degarc180")
+	#width, height = fitsfd[0].header['naxis1'], fitsfd[0].header['naxis2']
+	#f=open(tname, 'rb')
+	
+	telra, teldec = Angle( fitsfd[0].header['apra'] ).deg10, Angle( fitsfd[0].header['apdec'] ).deg10
+	naxis1, naxis2 = fitsfd[0].header['naxis1'], fitsfd[0].header['naxis2']
+	tblargs ={
+		'ra':telra,
+		'dec':teldec,
+		'npix1':naxis1,
+		'npix2':naxis2,
+	}	
+	
+	sources = getobjects( fitsfd[0].data )
+	fitstbl = mkfitstable( sources )
+	for key, val in tblargs.iteritems():
+		fitstbl.header[key] = val
+	tname = "{0}/{1}_{2}.axy".format(outDir, imgname.replace(".fits", ''), extnum)
+	print tname
+	
+	if os.path.exists(tname):
+		os.remove(tname)
+	
+	fitstbl.writeto( tname )
+	soc = scottSock( "nimoy", 9002  )
+	f=open(tname, 'rb')
+=======
 
 		
 
@@ -58,11 +95,12 @@ def main( imgname="20160423_080719_n45.fits", inDir='/home/scott/data/lemfl50', 
 	f=open(tname, 'rb')
 	
 	soc = scottSock( "nimoy", 9002  )
+>>>>>>> 4754d2981c88a9f699945b80a3a60f888f70870a
 
 	soc.send( f.read() )
-	telra, teldec = Angle( fitsfd[0].header['apra'] ), Angle( fitsfd[0].header['apdec'] )
-	jd = fitsfd[0].header['BJD']
 	
+	jd = fitsfd[0].header['BJD']
+	f.close()
 	fitsfd.close()
 	while 1:
 		try:
@@ -134,4 +172,10 @@ if __name__ == '__main__':
 		main(imfile, '.')
 
 
+<<<<<<< HEAD
+#for imfile in sys.argv[1:]:
+	#main(imfile, '.')
+main( "20160526_083730_n93.fits", "/home/sswindell/" ) 
+=======
+>>>>>>> 4754d2981c88a9f699945b80a3a60f888f70870a
 	

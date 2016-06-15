@@ -95,25 +95,44 @@ def solvefitsfd( img=fits.open( 'imagep120.fits' ), extnum=0, port=9002 ):
 	
 	
 	
-	def addwcs( imgfd, wcsfd, imgext=0, wcsext=0 ):
-		#add wcs and try to save in place
-		for key, value in wcsfd[wcsext].iteritems():
-			if key in imgfd[imext].header:
-				imgfd[imext].header[key+'_orig'] = imgfd[imext].header[key]
-			imgfd[imext].header[key] = ( wcsfd[key], "WCS Solved from astrometry.net" )
+def addwcs( imgfd, wcsfd, imgext=0, wcsext=0 ):
+	#add wcs and try to save in place
+	for key, value in wcsfd[wcsext].header.iteritems():
 		
+		print key, wcsfd[wcsext].header[key]
 		
-		try:
-			imgfd.flush()
-		except Exception as err:
-			imgfd.writeto( "wcs_{}".format( imgfd.filename() ) )
-			print "Could not save original file {0} saving as wcs_{0}".format( imgfd.filename )
+		if key == "COMMENT":
+			imgfd[imgext].header.add_comment( value )
+			
+		elif key == "HISTORY":
+			imgfd[imgext].header.add_history( value )
+			
+		else:
+		
+			if key in imgfd[imgext].header:
+				imgfd[imgext].header[key+'_orig'] = imgfd[imgext].header[key]
+			
+			
+			if key != 'HISTORY':
+				imgfd[imgext].header[key] = ( wcsfd[wcsext].header[key], "From astrometry.net" )
+	
+	
+
 			
 			
 			
 	
 	
-			
+if __name__ == '__main__':
+	for img in sys.argv[1:]:
+		
+		fitsfd = fits.open( img, mode='update' )
+		resp = solvefitsfd( fitsfd )
+		
+		if 'wcs' in resp.keys():
+			addwcs( fitsfd, resp['wcs'] )
+	
+			fitsfd.flush( output_verify='ignore' )
 				
 		
 		

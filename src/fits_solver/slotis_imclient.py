@@ -8,7 +8,7 @@ import os
 import tempfile
 from astropy.io import fits
 
-def solvefitsfd( img=fits.open( 'imagep120.fits' ), extnum=0, port=9002 ):
+def solvefitsfd( img, extnum=0, port=9002 ):
 	ra, dec = img[0].header['ra'] , img[0].header['dec']
 	naxis1, naxis2 = img[extnum].header['naxis1'], img[extnum].header['naxis2']
 	

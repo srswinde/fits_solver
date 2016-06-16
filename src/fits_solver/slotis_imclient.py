@@ -60,7 +60,6 @@ def solvefitsfd( img, extnum=0, port=9002, timeout=60.0):
 			pass
 	
 		if ( time.time() - t0 ) > timeout:
-			print time.time() - t0
 			return {}
 			
 	try:

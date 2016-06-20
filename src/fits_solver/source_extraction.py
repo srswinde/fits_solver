@@ -37,7 +37,7 @@ lookup = (
 	'flag'	#* ``flag`` (int) Extraction flags.
 )
 
-def getobjects( data ):
+def getobjects( data, thresh=5.0 ):
 	if data.dtype is not 'float32':
 		data = np.array(data, dtype="float32")
 	
@@ -48,7 +48,7 @@ def getobjects( data ):
 
 	rms = bkg.rms()
 	bkg.subfrom(data)
-	thresh = 5.0 * bkg.globalrms
+	thresh = thresh * bkg.globalrms
 	objects = sep.extract(data, thresh)
 
 	#print "there are ", len(objects), "objects"

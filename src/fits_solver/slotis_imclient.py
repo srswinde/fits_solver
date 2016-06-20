@@ -150,7 +150,7 @@ def main(img):
 		solved = True
 		addwcs( fitsfd, resp['wcs'] )
 	
-	fitsfd[0].header['WCSSOLVE'] = solved
+	fitsfd[0].header['FIXWCS'] = solved
 	fitsfd.flush( output_verify='ignore' )
 	
 

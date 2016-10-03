@@ -132,7 +132,7 @@ def addwcs( imgfd, wcsfd, imgext=0, wcsext=0 ):
 		else:
 		
 			if key in imgfd[imgext].header:
-				imgfd[imgext].header[key+'_orig'] = imgfd[imgext].header[key]
+				imgfd[imgext].header[key+'0'] = imgfd[imgext].header[key]
 			
 			
 			if key != 'HISTORY':

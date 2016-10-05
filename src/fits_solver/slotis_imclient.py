@@ -8,7 +8,7 @@ import os
 import tempfile
 from astropy.io import fits
 from threading import Thread
-
+import warnings
 class solverThread(Thread):
 	def __init__( self, img ):
 		Thread.__init__( self )
@@ -19,8 +19,11 @@ class solverThread(Thread):
 		fitsfd = fits.open( self.img )
 		resp = solvefitsfd( fitsfd, timeout=20.0 )
 		if 'wcs' in resp.keys():
-			addwcs( fitsfd, resp['wcs'] )
-			self.solved = True
+			
+			with warnings.catch_warnings():
+				warnings.simplefilter("ignore")
+				addwcs( fitsfd, resp['wcs'] )
+		self.solved = True
 
 
 
@@ -43,7 +46,7 @@ def solvefitsfd( img, extnum=0, port=9002, timeout=60.0):
 		
 	tname = tempfile.mktemp()
 	fitstbl.writeto( tname )
-	
+	print "tbl is ", tname
 	fitstbl_fd=open(tname, 'rb')
 	
 	fitstbl_fd=open(tname, 'rb')
@@ -58,7 +61,7 @@ def solvefitsfd( img, extnum=0, port=9002, timeout=60.0):
 			break
 		except Exception:
 			pass
-	
+		time.sleep(0.01)
 		if ( time.time() - t0 ) > timeout:
 			return {}
 			
@@ -67,6 +70,7 @@ def solvefitsfd( img, extnum=0, port=9002, timeout=60.0):
 	except Exception as err:
 		return {}
 
+
 	outfits = {}
 	for fname in meta['forder']:
 		fsize = meta['files'][fname]
@@ -74,7 +78,7 @@ def solvefitsfd( img, extnum=0, port=9002, timeout=60.0):
 		buffsize = 128
 		#print "File is {} filesize if {}".format(fname,fsize)
 		while 1:
-
+			time.sleep(0.01)
 			if fsize > buffsize:
 				newData = soc.recv( buffsize )
 				
@@ -91,17 +95,17 @@ def solvefitsfd( img, extnum=0, port=9002, timeout=60.0):
 				break
 			
 		tempname = tempfile.mktemp()
-
 		tmpfd = open( tempname, 'wb' )
-		
+		print meta
+		print tempname
 		tmpfd.write( data )
 		tmpfd.close()
-
+		
 		try:
 			outfits[fname] = fits.open( tempname )
 		except Exception as err:
 			print "The file {} was not downloaded error was {}".format( fname, err )
-
+	
 
 
 	for key, val in meta.iteritems():
@@ -126,13 +130,13 @@ def addwcs( imgfd, wcsfd, imgext=0, wcsext=0 ):
 			imgfd[imgext].header.add_history( value )
 		
 		elif key in ['DATE', 'SIMPLE']:
-		#dont replace these keys
+		#dont replace thes  keys
 			pass
 			
 		else:
 		
 			if key in imgfd[imgext].header:
-				imgfd[imgext].header[key+'0'] = imgfd[imgext].header[key]
+				imgfd[imgext].header[key+'_orig'] = imgfd[imgext].header[key]
 			
 			
 			if key != 'HISTORY':
@@ -197,7 +201,7 @@ if __name__ == '__main__':
 
 	if nLiveThreads > 0 :
 		print "10 more seconds for solving"
-		time.sleep(10.0)
+		time.sleep(20.0)
 	for thread in threads:
 		if not thread.solved:
 			print thread.img, "Not Solved"

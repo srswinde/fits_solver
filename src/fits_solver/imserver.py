@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 from server import Server, Client
 import time
 from imsolve import *
@@ -48,7 +50,15 @@ class catcher(Client):
 				f=open( fname, 'wb' )
 				f.write( self.ALL )
 				f.close()
-				self.client.send( self.solve(fname) )
+				resp = self.solve(fname)
+				sentdata = 0
+				buffsize = 1024
+				while sentdata + buffsize < len(resp):
+					self.client.send( resp[sentdata:sentdata+buffsize] )
+					sentdata+=buffsize
+					print sentdata, len(resp)
+				self.client.send( resp[-(len(resp) - sentdata):] )
+					
 				self.client.close()
 				#hdu = fits.PrimaryHDU(numpy.transpose(self.img))
 				#hdulist = fits.HDUList([hdu])
@@ -84,8 +94,8 @@ class catcher(Client):
 		default_params = {
 		
 			'scale-units': 'app',
-			'scale-low':0.2,
-			'scale-high':1.0,
+			'scale-low':0.1,
+			'scale-high':2.0,
 			'D':odir,
 			'o':bname,
 			'ra':ra,
@@ -96,7 +106,7 @@ class catcher(Client):
 			'X': 'x',
 			'Y': 'y',
 			's':	'fwhm',
-			'radius': 5,
+			'radius': 180,
 		}
 
 		default_flags =  ['overwrite', 'crpix-center']
@@ -116,21 +126,28 @@ class catcher(Client):
 		filedata = ""
 		
 		if os.path.exists( "{0}/{1}.solved".format( odir, bname ) ):
-			for ftype in ["wcs", "rdls", "corr", "match"]:
+			#flist = ["wcs", "rdls", "corr", "match"]:
+			flist = ['wcs']
+			for ftype in flist:
 				tmpfd = open("{0}/{1}.{2}".format(odir, bname, ftype ), "rb" )
+				fdata = tmpfd.read()
+				tmpfd.seek(0,0)
 				if ftype == 'wcs':
 					tmpfitsfd = fits.open(  tmpfd )
-					metadata['ra'], metadata['dec'] = RA_angle( Deg10( tmpfitsfd[0].header['crval1'] ) ).Format("hours"), Dec_angle( Deg10( tmpfitsfd[0].header['crval2'] ) ).Format( "degarc180" )
-				fdata = tmpfd.read()
-				tmpfd.close()
+					metadata['ra'], metadata['dec'] = RA_angle( Deg10( tmpfitsfd[0].header['crval1'] ) ).Format("hours"), Dec_angle( Deg10( tmpfitsfd[0].header['crval2'] ) ).Format( "degarc180" )					
+					
 				
+				tmpfd.close()
+				print ftype, len(fdata)
 				metadata['files'][ftype] = len( fdata )
 				filedata+=fdata
 				del fdata
 			print "Solved"
 				
-		
-		
+		else:
+			flist = []		
+
+		metadata["forder"] = flist
 		metajson = json.dumps( metadata )
 		metajson = metajson+(256-len(metajson))*" "
 		

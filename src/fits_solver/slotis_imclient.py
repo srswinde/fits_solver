@@ -1,7 +1,10 @@
+#!/usr/bin/python
+
 from scottSock import scottSock
 import json
 import time
-from source_extraction import *
+import fits_solver
+from fits_solver.source_extraction import *
 import tempfile
 import sys
 import os
@@ -16,14 +19,19 @@ class solverThread(Thread):
 		self.img=img
 		
 	def run( self ):
-		fitsfd = fits.open( self.img )
+		fitsfd = fits.open( self.img, mode="update" )
+		fitsfd[0].header["FIXWCS"] = 0
+		fitsfd.flush()
 		resp = solvefitsfd( fitsfd, timeout=20.0 )
-		if 'wcs' in resp.keys():
-			
+		if 'solved' in resp.keys() and resp['solved'] == True:
 			with warnings.catch_warnings():
 				warnings.simplefilter("ignore")
+			
+				fitsfd[0].header["FIXWCS"] = 1
+				fitsfd.flush()
 				addwcs( fitsfd, resp['wcs'] )
-		self.solved = True
+			self.solved = True
+			fitsfd.writeto( "wcs_{}".format( self.img ), clobber=True )
 
 
 
@@ -129,8 +137,8 @@ def addwcs( imgfd, wcsfd, imgext=0, wcsext=0 ):
 		elif key == "HISTORY":
 			imgfd[imgext].header.add_history( value )
 		
-		elif key in ['DATE', 'SIMPLE']:
-		#dont replace thes  keys
+		elif key in ['DATE', 'SIMPLE', 'NAXIS']:
+		#dont replace these keys
 			pass
 			
 		else:
@@ -171,6 +179,7 @@ def checkThreads( threadlist ):
 	return nsol, nliveThreads, len(threadlist) - nsol
 	
 if __name__ == '__main__':
+	timeout = 60.0
 	threads = []
 	for img in sys.argv[1:]:
 		solved = False
@@ -200,8 +209,8 @@ if __name__ == '__main__':
 		print nSolved, "images were solved,", nNotSolved, "not solved,", nLiveThreads, "threads alive"
 
 	if nLiveThreads > 0 :
-		print "10 more seconds for solving"
-		time.sleep(20.0)
+		print "{} more seconds for solving".format(timeout)
+		time.sleep(timeout)
 	for thread in threads:
 		if not thread.solved:
 			print thread.img, "Not Solved"

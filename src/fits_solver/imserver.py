@@ -121,7 +121,7 @@ class catcher(Client):
 			print err
 			
 		print bname
-		metadata = {}
+		metadata = {'solved':False}
 		metadata['files']={}
 		filedata = ""
 		
@@ -143,7 +143,7 @@ class catcher(Client):
 				filedata+=fdata
 				del fdata
 			print "Solved"
-				
+			metadata['solved'] = True
 		else:
 			flist = []		
 

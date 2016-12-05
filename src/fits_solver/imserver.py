@@ -84,7 +84,7 @@ class catcher(Client):
 			
 	
 	def solve(self, fname):
-		odir = "/home/sswindell/data/imserver"
+		odir = "/home/scott/data/imserver"
 		bname = time.ctime().replace(" ", '_')
 		fitsfile = fits.open(fname)
 		ra,dec = self.getradec(fitsfile)

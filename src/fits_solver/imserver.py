@@ -2,7 +2,7 @@
 
 from server import Server, Client
 import time
-from imsolve import *
+from fits_solver.imsolve import *
 from astropy.io import fits
 from astro.angles import *
 import tempfile
@@ -106,7 +106,7 @@ class catcher(Client):
 			'X': 'x',
 			'Y': 'y',
 			's':	'fwhm',
-			'radius': 180,
+			'radius': 5,
 		}
 
 		default_flags =  ['overwrite', 'crpix-center']
@@ -121,7 +121,7 @@ class catcher(Client):
 			print err
 			
 		print bname
-		metadata = {}
+		metadata = {'solved':False}
 		metadata['files']={}
 		filedata = ""
 		
@@ -143,7 +143,7 @@ class catcher(Client):
 				filedata+=fdata
 				del fdata
 			print "Solved"
-				
+			metadata['solved'] = True
 		else:
 			flist = []		
 

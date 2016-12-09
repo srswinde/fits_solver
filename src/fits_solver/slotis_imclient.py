@@ -59,7 +59,7 @@ def solvefitsfd( img, extnum=0, port=9002, timeout=60.0):
 	
 	fitstbl_fd=open(tname, 'rb')
 	
-	soc = scottSock( "nimoy", port  )
+	soc = scottSock( "jefftest2.as.arizona.edu", port  )
 	
 	soc.send( fitstbl_fd.read() )
 	t0 = time.time()
@@ -144,7 +144,7 @@ def addwcs( imgfd, wcsfd, imgext=0, wcsext=0 ):
 		else:
 		
 			if key in imgfd[imgext].header:
-				imgfd[imgext].header[key+'_orig'] = imgfd[imgext].header[key]
+				imgfd[imgext].header[key+'0'] = imgfd[imgext].header[key]
 			
 			
 			if key != 'HISTORY':
@@ -197,7 +197,7 @@ if __name__ == '__main__':
 
 		
 		nSolved, nLiveThreads, nNotSolved = checkThreads( threads )
-		while nLiveThreads > 10:
+		while nLiveThreads > 1:
 			print "Too many Threads waiting a few seconds"
 			nSolved, nLiveThreads, nNotSolved = checkThreads( threads )
 			"{} solved, {} not soved, {} threads alive".format( nSolved, nNotSolved, nLiveThreads )

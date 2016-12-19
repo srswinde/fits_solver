@@ -8,6 +8,7 @@ from astro.angles import *
 import tempfile
 import shlex
 import subprocess
+import subprocess32
 import os
 import select
 from astro.locales import mtlemmon
@@ -114,8 +115,9 @@ class catcher(Client):
 		cmd = astrometry_cmd( fname, default_params, default_flags )
 		print cmd
 		try:
-			subprocess.check_output( shlex.split( cmd ) )
-			
+			#subprocess.check_output( shlex.split( cmd ) )
+			subprocess32.check_output( shlex.split( cmd ) )
+
 		except Exception as err:
 			
 			print err

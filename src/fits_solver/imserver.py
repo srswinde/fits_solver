@@ -103,9 +103,9 @@ class catcher(Client):
 			'dec':dec,
 			'F': 1,
 			'w':	naxes[0],
-			'e': naxes[1],
-			'X': 'x',
-			'Y': 'y',
+			'e':	naxes[1],
+			'X': 	'x',
+			'Y': 	'y',
 			's':	'fwhm',
 			'radius': 5,
 		}
@@ -116,13 +116,13 @@ class catcher(Client):
 		print cmd
 		try:
 			#subprocess.check_output( shlex.split( cmd ) )
-			subprocess32.check_output( shlex.split( cmd ) )
-
+			resp=subprocess32.check_output( shlex.split( cmd ), timeout=10 )
+			
 		except Exception as err:
 			
 			print err
-			
-		print bname
+		print "response is ",resp,'end resp'
+		print 'bname is', bname
 		metadata = {'solved':False}
 		metadata['files']={}
 		filedata = ""

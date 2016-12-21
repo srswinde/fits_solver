@@ -14,5 +14,7 @@ setup(name='fits_solver',
 	  package_dir = {'':'src'},
 	  scripts = [
 		'src/fits_solver/slotis_imclient.py',
+		'src/fits_solver/imserver.py',
+		
 		],
      )

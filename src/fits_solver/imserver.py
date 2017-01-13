@@ -8,12 +8,12 @@ from astro.angles import *
 import tempfile
 import shlex
 import subprocess
-import subprocess32
+from subprocess32 import Popen, PIPE, TimeoutExpired
 import os
 import select
 from astro.locales import mtlemmon
 import sys
-
+import signal
 
 class catcher(Client):
 	def __init__( self, (client, address) ):
@@ -90,8 +90,18 @@ class catcher(Client):
 		fitsfile = fits.open(fname)
 		ra,dec = self.getradec(fitsfile)
 		naxes = ( fitsfile[1].header['npix1'], fitsfile[1].header['npix2'] )
+
+		if 'RADIUS' in fitsfile[1].header:
+			radius = float( fitsfile[1].header['radius'] )
+			print "radius is", radius
+		else:
+			radius = 5
+		if 'TIMEOUT' in fitsfile[1].header:
+			timeout=float( fitsfile[1].header['timeout'] )
+		else:
+			timeout = 20.0
 		fitsfile.close()
-		
+		print "bad radius is", radius
 		default_params = {
 		
 			'scale-units': 'app',
@@ -107,22 +117,23 @@ class catcher(Client):
 			'X': 	'x',
 			'Y': 	'y',
 			's':	'fwhm',
-			'radius': 5,
+			'radius': radius,
 		}
 
 		default_flags =  ['overwrite', 'crpix-center']
 		#astro_params['ra'], astro_params['dec'] = getfl50radec( img )
 		cmd = astrometry_cmd( fname, default_params, default_flags )
 		print cmd
-		try:
-			#subprocess.check_output( shlex.split( cmd ) )
-			resp=subprocess32.check_output( shlex.split( cmd ), timeout=10 )
+		with Popen(cmd, shell=True, stdout=PIPE, preexec_fn=os.setsid) as process:
+			try:
+				#subprocess.check_output( shlex.split( cmd ) )
+				resp=process.communicate( timeout=timeout )
 			
-		except Exception as err:
-			
-			print err
-		print "response is ",resp,'end resp'
-		print 'bname is', bname
+			except TimeoutExpired:
+				os.killpg(process.pid, signal.SIGINT) # send signal to the process group
+				resp = process.communicate()[0]
+				print "We Timedout"
+
 		metadata = {'solved':False}
 		metadata['files']={}
 		filedata = ""

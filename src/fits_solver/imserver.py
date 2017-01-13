@@ -8,6 +8,7 @@ from astro.angles import *
 import tempfile
 import shlex
 import subprocess
+import subprocess32
 import os
 import select
 from astro.locales import mtlemmon
@@ -102,9 +103,9 @@ class catcher(Client):
 			'dec':dec,
 			'F': 1,
 			'w':	naxes[0],
-			'e': naxes[1],
-			'X': 'x',
-			'Y': 'y',
+			'e':	naxes[1],
+			'X': 	'x',
+			'Y': 	'y',
 			's':	'fwhm',
 			'radius': 5,
 		}
@@ -114,13 +115,14 @@ class catcher(Client):
 		cmd = astrometry_cmd( fname, default_params, default_flags )
 		print cmd
 		try:
-			subprocess.check_output( shlex.split( cmd ) )
+			#subprocess.check_output( shlex.split( cmd ) )
+			resp=subprocess32.check_output( shlex.split( cmd ), timeout=10 )
 			
 		except Exception as err:
 			
 			print err
-			
-		print bname
+		print "response is ",resp,'end resp'
+		print 'bname is', bname
 		metadata = {'solved':False}
 		metadata['files']={}
 		filedata = ""

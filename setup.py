@@ -5,7 +5,8 @@
 from distutils.core import setup
 import os
 
-setup(name='fits_solver',
+setup(
+      name='fits_solver',
       version='1.0',
       description='Python Distribution Utilities',
       author='Scott Swindell',
@@ -14,5 +15,7 @@ setup(name='fits_solver',
 	  package_dir = {'':'src'},
 	  scripts = [
 		'src/fits_solver/slotis_imclient.py',
+		#'src/fits_solver/lemfl_imclient.py',
+		#'src/fits_solver/m4k_imclient.py',
 		],
      )

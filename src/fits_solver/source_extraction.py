@@ -68,6 +68,13 @@ def mkfitstable( objects ):
 	
 	return dtable
 		
+def listify(objects):
+	cols=[]
+	fwhms = 2*np.sqrt(math.log(2)*(objects['a'] + objects['b']))
+	outlist = []
+	for ii in range( len( fwhms ) ):
+		outlist.append({ 'x':objects['x'][ii], 'y':objects['y'][ii], 'fwhm':fwhms[ii] })
+	return outlist
 
 def writetmpfits( img, extnum=2,  **tblargs ):
 

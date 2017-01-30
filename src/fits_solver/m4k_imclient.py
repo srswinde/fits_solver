@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 from scottSock import scottSock
 import json
 import time

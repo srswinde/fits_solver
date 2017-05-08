@@ -1,6 +1,37 @@
 import json
 from astro.angles import Deg10, RA_angle, Dec_angle
 import sys
+
+"""
+Name parse_tpoint.py
+
+This program takes json data from astrometry.json.
+
+astrometry.json should file should be an array of 
+JSON objects of the form:
+ {
+        "lst": "13:51:11", 
+        "midpointDec": "+28:51:03.31", 
+        "midpointRA": "14:34:46.21", 
+        "name": "scott0124", 
+        "obsDec": "+28:51:21.5", 
+        "obsHA": "-00:43:57", 
+        "obsRA": "14:34:27.73"
+}, 
+
+Where 
+lst = sidereal time
+midpointDec = the solved Dec
+midpointRA = the solved RA
+obsDec = the Dec from the telescope
+obsRA = the RA from the telescope
+obsHa = the Hour Angle from the telescope
+
+The output is sent to stdout and it is supposed to match the 
+Record style 1 in section 4.5.4 of the tpoint handbook. 
+
+"""
+
 def ascii_encode_dict(data):
     ascii_encode = lambda x: str(x).encode('ascii')
     return dict(map(ascii_encode, pair) for pair in data.items())

@@ -33,7 +33,7 @@ def solvefitsfd( img, extnum=0, port=9002 ):
 
 	fitstbl_fd=open(tname, 'rb')
 	
-	soc = scottSock( "nimoy", port  )
+	soc = scottSock( "jefftest2.as.arizona.edu", 9002  )
 
 	soc.send( fitstbl_fd.read() )
 	while 1:

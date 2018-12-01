@@ -99,7 +99,7 @@ class mont4k( collections.MutableMapping ):
 	
 	def __str__( self ):
 		output = {}
-		for key,val in self.info.iteritems():
+		for key,val in self.info.items():
 			if isinstance( val, fits.hdu.hdulist.HDUList ):
 				pass
 			else:
@@ -109,7 +109,7 @@ class mont4k( collections.MutableMapping ):
 	
 	def __dict__( self ):
 		output = {}
-		for key,val in self.info.iteritems():
+		for key,val in self.info.items():
 			if isinstance( val, fits.hdu.hdulist.HDUList ):
 				pass
 			else:
@@ -172,7 +172,7 @@ def astrometry_cmd(fname, params={}, flags=[]):
 	
 	args = ''
 	
-	for name, val in params.iteritems():
+	for name, val in params.items():
 
 		if len(name) == 1:
 			args+=" -{0} {1} ".format(name, val)
@@ -252,7 +252,7 @@ that we are all used to.
 
 		
 		if args.e < 0:
-			exts = range( 1, len(img) )
+			exts = list(range( 1, len(img)))
 		else:
 			exts = [args.e]
 			
@@ -260,7 +260,7 @@ that we are all used to.
 			astro_params['6'] = ext
 			astro_params['o'] = "{0}_ext{1}".format( bname, ext )
 			cmd = astrometry_cmd( args.f, astro_params, astro_flags )
-			print cmd
+			print(cmd)
 			
 			os.system(cmd)
 	
@@ -276,7 +276,7 @@ that we are all used to.
 			astro_params['ra'], astro_params['dec'] = getazcamradec( img )	
 			
 			if args.e < 0:
-				exts = range( 1, len(img) )
+				exts = list(range( 1, len(img)))
 			else:
 				exts = [args.e]
 				
@@ -285,7 +285,7 @@ that we are all used to.
 				astro_params['6'] = ext
 				astro_params['o'] = "{0}_ext{1}".format( bname, ext )
 				cmd = astrometry_cmd( path_file, astro_params, astro_flags )
-				print cmd
+				print(cmd)
 			
 				os.system(cmd)
 

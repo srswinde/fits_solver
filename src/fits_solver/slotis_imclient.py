@@ -40,7 +40,7 @@ class solverThread(Thread):
 		fitsfd[0].header["FIXWCS"] = 0
 		fitsfd.flush()
 		resp = self.solvefitsfd( fitsfd,  )
-		if 'solved' in resp.keys() and resp['solved'] == True:
+		if 'solved' in list(resp.keys()) and resp['solved'] == True:
 			with warnings.catch_warnings():
 				warnings.simplefilter("ignore")
 			
@@ -72,7 +72,7 @@ class solverThread(Thread):
 			'timeout':self.timeout #timeout tells the server when to give up.
 		}
 		
-		for argname, argvalue in self.solargs.iteritems():
+		for argname, argvalue in self.solargs.items():
 			tblargs[argname] = argvalue
 
 		#build the fits table
@@ -80,7 +80,7 @@ class solverThread(Thread):
 		self.objs = listify( objs )
 		fitstbl = mkfitstable( objs )
 	
-		for key, val in tblargs.iteritems():
+		for key, val in tblargs.items():
 			fitstbl.header[key] = val
 		
 		
@@ -145,11 +145,11 @@ class solverThread(Thread):
 			try:
 				outfits[fname] = fits.open( tempname )
 			except Exception as err:
-				print "The file {} was not downloaded error was {}".format( fname, err )
+				print("The file {} was not downloaded error was {}".format( fname, err ))
 	
 
 
-		for key, val in meta.iteritems():
+		for key, val in meta.items():
 			if str(key) != "files" and str(key) != "forder":
 				outfits[key] = val
 			
@@ -172,7 +172,7 @@ class solverThread(Thread):
 	
 def addwcs( imgfd, wcsfd, imgext=0, wcsext=0 ):
 	#add wcs and try to save in place
-	for key, value in wcsfd[wcsext].header.iteritems():
+	for key, value in wcsfd[wcsext].header.items():
 		
 		
 		if key == "COMMENT":
@@ -202,7 +202,7 @@ def main(img):
 	fitsfd = fits.open( img, mode='update' )
 	resp = solvefitsfd( fitsfd, port=9004 )
 	solved = False
-	if 'wcs' in resp.keys():
+	if 'wcs' in list(resp.keys()):
 		solved = True
 		addwcs( fitsfd, resp['wcs'] )
 	
@@ -261,7 +261,7 @@ if __name__ == '__main__':
 			threads[ threadIndex ].start()
 			threadIndex+=1
 		else:
-			print "Too many Threads. Waiting till one solves or fails. {} Threads running.".format(nLiveThreads)
+			print("Too many Threads. Waiting till one solves or fails. {} Threads running.".format(nLiveThreads))
 			
 		time.sleep(1.0)
 				
@@ -272,18 +272,18 @@ if __name__ == '__main__':
 	while nLiveThreads > 0:
 		now = time.time()
 		nSolved, nLiveThreads, nNotSolved = checkThreads( threads )
-		print "waiting for {} threads to finish, {:.1f}".format(nLiveThreads, now-t0)
+		print("waiting for {} threads to finish, {:.1f}".format(nLiveThreads, now-t0))
 		#Make sure the remaining threads don't take too long!
 		if (now - t0) > args.timeout*nLiveThreads + 5:
-			print "The last Threads took too long timing out."
+			print("The last Threads took too long timing out.")
 			break
 		
 		time.sleep(1.0)
-	print "All threads have finished."
-	print "{} failed\n{} solved".format(nNotSolved, nSolved)
+	print("All threads have finished.")
+	print("{} failed\n{} solved".format(nNotSolved, nSolved))
 
 	
-	print args.log
+	print(args.log)
 	if args.log:
 		
 		if args.log.endswith('/'):

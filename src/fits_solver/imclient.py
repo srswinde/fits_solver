@@ -1,7 +1,7 @@
 from scottSock import scottSock
 import json
 import time
-from source_extraction import *
+from .source_extraction import *
 import tempfile
 
 
@@ -25,7 +25,7 @@ def main( imgname="pointing0032.fits", inDir='/home/sswindell/data/images/flexda
 			meta = soc.recv( 128 )
 			break
 		except Exception:
-			print "waiting"
+			print("waiting")
 		
 	meta = json.loads( meta )
 
@@ -34,7 +34,7 @@ def main( imgname="pointing0032.fits", inDir='/home/sswindell/data/images/flexda
 
 
 	data=""
-	for key,val in meta.iteritems():
+	for key,val in meta.items():
 		buffsize = 1024
 		while 1:
 			if val > buffsize:
@@ -49,7 +49,7 @@ def main( imgname="pointing0032.fits", inDir='/home/sswindell/data/images/flexda
 		tmpfd.close()
 
 		
-	print meta
+	print(meta)
 
 	soc.close()
 	

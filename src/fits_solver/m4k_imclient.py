@@ -3,7 +3,7 @@
 from scottSock import scottSock
 import json
 import time
-from source_extraction import *
+from .source_extraction import *
 import tempfile
 import sys
 import os
@@ -25,7 +25,7 @@ def solvefitsfd( img, extnum=0, port=9002 ):
 
 		
 	fitstbl = mkfitstable( objs )
-	for key, val in tblargs.iteritems():
+	for key, val in tblargs.items():
 		fitstbl.header[key] = val
 	tname = tempfile.mktemp()
 	fitstbl.writeto( tname )
@@ -82,11 +82,11 @@ def solvefitsfd( img, extnum=0, port=9002 ):
 		try:
 			outfits[fname] = fits.open( tempname )
 		except Exception as err:
-			print "The file {} was not downloaded error was {}".format( fname, err )
+			print("The file {} was not downloaded error was {}".format( fname, err ))
 
 		os.remove(tempname)
 
-	for key, val in meta.iteritems():
+	for key, val in meta.items():
 		if str(key) != "files" and str(key) != "forder":
 			outfits[key] = val
 
@@ -121,18 +121,18 @@ def main( imgname="test0021.fits", inDir='/home/bigobs/data/scott/26april16', ou
 		'npix2':naxis2,
 	}	
 
-	for key, val in headervals.iteritems():
+	for key, val in headervals.items():
 		tblargs[key] = val
 	
-	print tblargs
+	print(tblargs)
 	sources = getobjects( img[extnum].data )
 	fitstbl = mkfitstable( sources )
 	
-	for key, val in tblargs.iteritems():
+	for key, val in tblargs.items():
 		fitstbl.header[key] = val
 
 	tname = "{0}/{1}_{2}.axy".format(outDir, imgname.replace(".fits", ''), extnum)
-	print tname
+	print(tname)
 	fitstbl.writeto( tname )
 		
 	
@@ -148,7 +148,7 @@ def main( imgname="test0021.fits", inDir='/home/bigobs/data/scott/26april16', ou
 			meta = soc.recv( 256 )
 			break
 		except Exception:
-			print "waiting"
+			print("waiting")
 		
 	meta = json.loads( meta )
 
@@ -157,7 +157,7 @@ def main( imgname="test0021.fits", inDir='/home/bigobs/data/scott/26april16', ou
 
 
 	data=""
-	for key,val in meta['files'].iteritems():
+	for key,val in meta['files'].items():
 		buffsize = 1024
 		while 1:
 			if val > buffsize:
@@ -167,13 +167,13 @@ def main( imgname="test0021.fits", inDir='/home/bigobs/data/scott/26april16', ou
 				data+=soc.recv(val)
 				break
 	
-		print "{0}/{1}_{2}.{3}".format(outDir, imgname, extnum, key)
+		print("{0}/{1}_{2}.{3}".format(outDir, imgname, extnum, key))
 		tmpfd = open("{0}/{1}_{2}.{3}".format(outDir, imgname, extnum, key), 'wb')
 		tmpfd.write( data )
 		tmpfd.close()
 
 		
-	print meta
+	print(meta)
 
 	soc.close()
 	

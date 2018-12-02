@@ -20,10 +20,10 @@ def solvefitsfd( img, extnum=0, port=9002 ):
 		'dec':dec,
 		'npix1':naxis1,
 		'npix2':naxis2,
-	}	
-	
+	}
 
-		
+
+
 	fitstbl = mkfitstable( objs )
 	for key, val in tblargs.items():
 		fitstbl.header[key] = val
@@ -32,8 +32,8 @@ def solvefitsfd( img, extnum=0, port=9002 ):
 
 
 	fitstbl_fd=open(tname, 'rb')
-	
-	soc = scottSock( "nimoy", port  )
+
+	soc = scottSock( "jefftest2.as.arizona.edu", port  )
 
 	soc.send( fitstbl_fd.read() )
 	while 1:
@@ -53,30 +53,30 @@ def solvefitsfd( img, extnum=0, port=9002 ):
 	outfits = {}
 	for fname in meta['forder']:
 		fsize = meta['files'][fname]
-		data = ''		
+		data = b''
 		buffsize = 128
 		#print "File is {} filesize if {}".format(fname,fsize)
 		while 1:
 
 			if fsize > buffsize:
 				newData = soc.recv( buffsize )
-				
+
 				if len(newData) == 0:
 					#print "Soc recieved no data for file {}".format(fname)
 					#print "Buffer size is {} file has {} bytes left, data is {} bytes".format(buffsize, fsize, len(data))
 					break
-				
+
 				data+=newData
-				
+
 				fsize-=len(newData)
 			else:
 				data+=soc.recv(fsize)
 				break
-			
+
 		tempname = tempfile.mktemp()
 
 		tmpfd = open( tempname, 'wb' )
-		
+
 		tmpfd.write( data )
 		tmpfd.close()
 		try:
@@ -91,13 +91,13 @@ def solvefitsfd( img, extnum=0, port=9002 ):
 			outfits[key] = val
 
 	return outfits
-		
-		
+
+
 def main( imgname="test0021.fits", inDir='/home/bigobs/data/scott/26april16', outDir=None, extnum=1, port=9002, **headervals):
 
 
 	if inDir.endswith('/'): endDir = endDir[:-1]
-	if outDir:	
+	if outDir:
 		if outDir.endswith('/'): outDir = outDir[:-1]
 	else:
 		outDir = "{0}/astrometry".format(inDir)
@@ -119,23 +119,23 @@ def main( imgname="test0021.fits", inDir='/home/bigobs/data/scott/26april16', ou
 		'dec':dec,
 		'npix1':naxis1,
 		'npix2':naxis2,
-	}	
+	}
 
 	for key, val in headervals.items():
 		tblargs[key] = val
-	
+
 	print(tblargs)
 	sources = getobjects( img[extnum].data )
 	fitstbl = mkfitstable( sources )
-	
+
 	for key, val in tblargs.items():
 		fitstbl.header[key] = val
 
 	tname = "{0}/{1}_{2}.axy".format(outDir, imgname.replace(".fits", ''), extnum)
 	print(tname)
 	fitstbl.writeto( tname )
-		
-	
+
+
 	f=open(tname, 'rb')
 
 	soc = scottSock( "nimoy", port  )
@@ -149,7 +149,7 @@ def main( imgname="test0021.fits", inDir='/home/bigobs/data/scott/26april16', ou
 			break
 		except Exception:
 			print("waiting")
-		
+
 	meta = json.loads( meta )
 
 
@@ -166,17 +166,17 @@ def main( imgname="test0021.fits", inDir='/home/bigobs/data/scott/26april16', ou
 			else:
 				data+=soc.recv(val)
 				break
-	
+
 		print("{0}/{1}_{2}.{3}".format(outDir, imgname, extnum, key))
 		tmpfd = open("{0}/{1}_{2}.{3}".format(outDir, imgname, extnum, key), 'wb')
 		tmpfd.write( data )
 		tmpfd.close()
 
-		
+
 	print(meta)
 
 	soc.close()
-	
+
 if __name__ == '__main__':
 	port = int(sys.argv[1])
 	main( port=port )

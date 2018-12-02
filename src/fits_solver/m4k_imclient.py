@@ -8,6 +8,7 @@ import tempfile
 import sys
 import os
 import tempfile
+from astropy.io import fits
 
 def solvefitsfd( img, extnum=0, port=9002 ):
 	objs = getobjects( img[extnum].data )
@@ -33,7 +34,9 @@ def solvefitsfd( img, extnum=0, port=9002 ):
 
 	fitstbl_fd=open(tname, 'rb')
 
+
 	soc = scottSock( "jefftest2.as.arizona.edu", port  )
+
 
 	soc.send( fitstbl_fd.read() )
 	while 1:
@@ -92,8 +95,9 @@ def solvefitsfd( img, extnum=0, port=9002 ):
 
 	return outfits
 
-
-def main( imgname="test0021.fits", inDir='/home/bigobs/data/scott/26april16', outDir=None, extnum=1, port=9002, **headervals):
+		
+		
+def main( imgname, inDir='.', outDir=None, extnum=0, port=9002, **headervals):
 
 
 	if inDir.endswith('/'): endDir = endDir[:-1]
@@ -112,7 +116,7 @@ def main( imgname="test0021.fits", inDir='/home/bigobs/data/scott/26april16', ou
 
 	#set up the tblargs
 	ra, dec = img[0].header['ra'] , img[0].header['dec']
-	naxis1, naxis2 = img[1].header['naxis1'], img[1].header['naxis2']
+	naxis1, naxis2 = img[0].header['naxis1'], img[0].header['naxis2']
 
 	tblargs ={
 		'ra':ra,
@@ -132,13 +136,12 @@ def main( imgname="test0021.fits", inDir='/home/bigobs/data/scott/26april16', ou
 		fitstbl.header[key] = val
 
 	tname = "{0}/{1}_{2}.axy".format(outDir, imgname.replace(".fits", ''), extnum)
-	print(tname)
-	fitstbl.writeto( tname )
 
+	fitstbl.writeto( tname )
 
 	f=open(tname, 'rb')
 
-	soc = scottSock( "nimoy", port  )
+	soc = scottSock( "jefftest2.as.arizona.edu", port  )
 
 	soc.send( f.read() )
 
@@ -178,8 +181,8 @@ def main( imgname="test0021.fits", inDir='/home/bigobs/data/scott/26april16', ou
 	soc.close()
 
 if __name__ == '__main__':
-	port = int(sys.argv[1])
-	main( port=port )
+	fname = sys.argv[1]
+	main( fname, '/newopt/new_M4K/20171105/ccdred' )
 
 
 

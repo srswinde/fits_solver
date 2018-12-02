@@ -14,36 +14,36 @@ lookup = (
 	'xmin',	#* ``xmin``, ``xmax`` (int) Minimum, maximum x coordinates of pixels.
 	'xmax',
 	'ymin',	#* ``ymin``, ``ymax`` (int) Minimum, maximum y coordinates of pixels.
-	'ymax', 
+	'ymax',
 	'x',		#* ``x``, ``y`` (float) object barycenter (first moments).
-	'y', 
+	'y',
 	'x2',		#* ``x2``, ``y2``, ``xy`` (float) Second moments.
-	'y2', 
-	'xy', 
+	'y2',
+	'xy',
 	'a',		#* ``a``, ``b``, ``theta`` (float) Ellipse parameters.
-	'b', 
-	'theta', 
+	'b',
+	'theta',
 	'cxx',	#* ``cxx``, ``cyy``, ``cxy`` (float) Alternative ellipse parameters.
-	'cyy', 
-	'cxy', 
+	'cyy',
+	'cxy',
 	'cflux',	#* ``cflux`` (float) Sum of member pixels in convolved data.
 	'flux',	#* ``flux`` (float) Sum of member pixels in unconvolved data.
 	'cpeak', #* ``cpeak`` (float) Peak value in convolved data.
 	'peak',	#* ``peak`` (float) Peak value in unconvolved data.
 	'xcpeak',	#* ``xcpeak``, ``ycpeak`` (int) Coordinate of convolved peak pixel.
-	'ycpeak', 
+	'ycpeak',
 	'xpeak',	#* ``xpeak``, ``ypeak`` (int) Coordinate of convolved peak pixel.
-	'ypeak', 
+	'ypeak',
 	'flag'	#* ``flag`` (int) Extraction flags.
 )
 
 def getobjects( data, thresh=5.0 ):
 	if data.dtype is not 'float32':
 		data = np.array(data, dtype="float32")
-	
+
 	bkg = sep.Background(data)
 	bkg = sep.Background(data, bw=64, bh=64, fw=3, fh=3)
-	
+
 	back = bkg.back()
 
 	rms = bkg.rms()
@@ -53,21 +53,21 @@ def getobjects( data, thresh=5.0 ):
 
 	#print "there are ", len(objects), "objects"
 	return objects
-	
+
 
 def mkfitstable( objects ):
 	cols=[]
 	for name in ('x', 'y'):
 		cols.append( fits.Column(name=name, format='E', array=objects[name] ) )
-		
-	fwhms = 2*np.sqrt(math.log(2)*(objects['a'] + objects['b']))
+
+	fwhms = 2*np.sqrt(math.log(2)*(objects['a']**2 + objects['b']**2))
 	cols.append( fits.Column( name='fwhm', format='E', array=fwhms ) )
 	coldefs = fits.ColDefs( cols )
-	
+
 	dtable = fits.BinTableHDU.from_columns( coldefs )
-	
+
 	return dtable
-		
+
 def listify(objects):
 	cols=[]
 	fwhms = 2*np.sqrt(math.log(2)*(objects['a'] + objects['b']))
@@ -84,10 +84,10 @@ def writetmpfits( img, extnum=2,  **tblargs ):
 
 
 	tbhdu = mkfitstable( getobjects( img[extnum].data ) )
-	
+
 	for key, val in tblargs.iteritems():
 		tbhdu.header[key] = val
-	
+
 	tname = "{0}.fits".format( tempfile.mktemp() )
 	tbhdu.writeto(tname)
 	del tbhdu
@@ -95,5 +95,5 @@ def writetmpfits( img, extnum=2,  **tblargs ):
 	return tname
 
 
-	
+
 

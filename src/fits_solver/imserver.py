@@ -16,9 +16,10 @@ import sys
 import signal
 
 class catcher(Client):
-	def __init__( self, (client, address) ):
+	def __init__( self, xxx_todo_changeme ):
+		(client, address) = xxx_todo_changeme
 		Client.__init__( self, (client, address) )
-		print "Imclient connected"
+		print("Imclient connected")
 		self.size = 1024
 		self.count = 0
 		self.headerData = False
@@ -47,7 +48,7 @@ class catcher(Client):
 				running = 0
 
 				fname = "{0}.fits".format( tempfile.mktemp() )
-				print "writing fits file", fname
+				print("writing fits file", fname)
 				f=open( fname, 'wb' )
 				f.write( self.ALL )
 				f.close()
@@ -57,7 +58,7 @@ class catcher(Client):
 				while sentdata + buffsize < len(resp):
 					self.client.send( resp[sentdata:sentdata+buffsize] )
 					sentdata+=buffsize
-					print sentdata, len(resp)
+					print(sentdata, len(resp))
 				self.client.send( resp[-(len(resp) - sentdata):] )
 					
 				self.client.close()
@@ -70,7 +71,7 @@ class catcher(Client):
 		if self.size == 256:
 
 			self.infoStr = data
-			print self.infoStr
+			print(self.infoStr)
 			self.size = 1024
 
 		else:
@@ -93,7 +94,7 @@ class catcher(Client):
 
 		if 'RADIUS' in fitsfile[1].header:
 			radius = float( fitsfile[1].header['radius'] )
-			print "radius is", radius
+			print("radius is", radius)
 		else:
 			radius = 5
 		if 'TIMEOUT' in fitsfile[1].header:
@@ -101,7 +102,7 @@ class catcher(Client):
 		else:
 			timeout = 20.0
 		fitsfile.close()
-		print "bad radius is", radius
+		print("bad radius is", radius)
 		default_params = {
 		
 			'scale-units': 'app',
@@ -123,7 +124,7 @@ class catcher(Client):
 		default_flags =  ['overwrite', 'crpix-center']
 		#astro_params['ra'], astro_params['dec'] = getfl50radec( img )
 		cmd = astrometry_cmd( fname, default_params, default_flags )
-		print cmd
+		print(cmd)
 		with Popen(cmd, shell=True, stdout=PIPE, preexec_fn=os.setsid) as process:
 			try:
 				#subprocess.check_output( shlex.split( cmd ) )
@@ -132,7 +133,7 @@ class catcher(Client):
 			except TimeoutExpired:
 				os.killpg(process.pid, signal.SIGINT) # send signal to the process group
 				resp = process.communicate()[0]
-				print "We Timedout"
+				print("We Timedout")
 
 		metadata = {'solved':False}
 		metadata['files']={}
@@ -151,11 +152,11 @@ class catcher(Client):
 					
 				
 				tmpfd.close()
-				print ftype, len(fdata)
+				print(ftype, len(fdata))
 				metadata['files'][ftype] = len( fdata )
 				filedata+=fdata
 				del fdata
-			print "Solved"
+			print("Solved")
 			metadata['solved'] = True
 		else:
 			flist = []		

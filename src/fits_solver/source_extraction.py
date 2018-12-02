@@ -85,7 +85,10 @@ def writetmpfits( img, extnum=2,  **tblargs ):
 
 	tbhdu = mkfitstable( getobjects( img[extnum].data ) )
 
-	for key, val in tblargs.iteritems():
+
+	
+	for key, val in list(tblargs.items()):
+
 		tbhdu.header[key] = val
 
 	tname = "{0}.fits".format( tempfile.mktemp() )

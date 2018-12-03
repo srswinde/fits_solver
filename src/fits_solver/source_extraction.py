@@ -1,6 +1,7 @@
 import numpy as np
 import sep
 from astropy.io import fits
+import pandas as pd
 
 import math
 from astro.angles import RA_angle, Dec_angle
@@ -86,7 +87,7 @@ def writetmpfits( img, extnum=2,  **tblargs ):
 	tbhdu = mkfitstable( getobjects( img[extnum].data ) )
 
 
-	
+
 	for key, val in list(tblargs.items()):
 
 		tbhdu.header[key] = val
@@ -99,4 +100,7 @@ def writetmpfits( img, extnum=2,  **tblargs ):
 
 
 
-
+def mkdataframe(objects):
+    df = pd.DataFrame(objects)
+    df["FWHM"] = 2*np.sqrt(math.log(2)*(df.a**2+df.b**2))
+    return df
